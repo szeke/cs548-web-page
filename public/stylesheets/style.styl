@@ -1,0 +1,72 @@
+/*
+ * Import nib
+ */
+@import 'nib'
+
+/*
+ * Grab a custom font from Google
+ */
+@import url('http://fonts.googleapis.com/css?family=Quicksand')
+
+/*
+ * Nib provides a CSS reset
+ */
+//global-reset()
+
+/*
+ * Store the main color and
+ * background color as variables
+ */
+main-color = #fa5b4d
+background-color = #faf9f0
+
+// body
+//   font-family 'Georgia'
+//   background-color background-color
+//   color #444
+
+header
+  font-family 'Quicksand'
+  padding 1px 10px
+  color #fff
+  font-size 20px
+  text-align center
+
+  /*
+   * Note the use of the `main-color`
+   * variable and the `darken` function
+   */
+  background-color main-color
+  border-bottom 1px solid darken(main-color, 30%)
+  text-shadow 0px -1px 0px darken(main-color, 30%)
+
+header a
+  color #fff
+
+header img
+  padding 30px 10px 0px 10px
+
+header h1
+  padding 1px 10px
+  font-size 200%
+
+footer
+  width 90%
+  margin 50px auto
+  border-top 1px dotted #ccc
+  padding-top 5px
+  font-size 13px
+
+h2
+  color main-color
+
+h4
+  //color main-color
+  //border-bottom 1px solid darken(main-color, 30%)
+
+hr.lecture
+  margin: 2px 0
+  border-top: 1px solid main-color
+
+p.first
+  padding 20px 0px 0px 0px

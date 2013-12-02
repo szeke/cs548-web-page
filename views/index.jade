@@ -1,0 +1,202 @@
+extend layout
+block content
+  header
+    h1= topLevel['dcterms:title']
+    h1 Spring 2014
+
+    .row
+      .col-xs-2
+      each v, index in instructors
+        .col-xs-4
+          div
+            p
+              img(src=people[v]['foaf:depiction']) 
+            p
+              a(href=people[v]['foaf:homepage']) #{people[v]['foaf:title']} #{people[v]['foaf:name']}
+  .container
+    .row
+      .col-xs-12 
+        p.first 
+          | This course will focus on foundations and techniques for information extraction, modeling and integration. 
+          | Topics covered include semantic web (RDF, OWL, SPARQL), linked data and services, mash-ups, 
+          | theory of data integration, schema mappings, record/entity linkage, data cleaning, source modeling, 
+          | and information extraction. The class will be run as a lecture course with significant hands-on experience. 
+          | Students will work in 2 person groups to develop integrated Web applications using the research and tools 
+          | covered in the class.
+
+
+    // The administative information. /////////////////////////////////////////////
+    //
+    .row
+      .col-xs-12
+        h2 Administrative Information
+    .row
+      .col-xs-4
+        strong
+          | Prerequisites (can be waived):
+      .col-xs-8
+        each uri, index in topLevel['hasPrerequisite']
+          = prerequisites[uri]['rdfs:label'] 
+          if (index < topLevel['hasPrerequisite'].length - 1)
+            span= ", "
+    .row
+      .col-xs-4
+        strong
+          | Meeting Time:
+      .col-xs-8
+        | Monday and Wednesday 3:30-4:50pm
+    .row
+      .col-xs-4
+        strong
+          | Location:
+      .col-xs-8
+        = topLevel['syll:hasClassroom']
+    .row
+      .col-xs-4
+        strong
+          | Teaching Assistant (tentative):
+      .col-xs-8
+        - var taUri = topLevel['syll:hasTeachingAssistant']
+        a(href=people[taUri]['foaf:homepage']) #{people[taUri]['foaf:name']}
+    .row
+      .col-xs-4
+        strong
+          | Grader:
+      .col-xs-8
+        | TBD
+    .row
+      .col-xs-4
+        strong
+          | Blackboard:
+      .col-xs-8
+        a(href='https://blackboard.usc.edu') https://blackboard.usc.edu
+
+    // Lectures /////////////////////////////////////////////
+    //
+    .row
+      .col-xs-12
+        h2 Lectures
+
+    each v in lectures.uris
+      hr.lecture
+      .row
+        .col-xs-8
+          h4= lectures[v]['dcterms:title']
+        .col-xs-4
+          h4.text-right= lectures[v]['syll:hasEventDate'].format('YYYY-MM-DD')
+      .row
+        .col-xs-8
+          p Some text
+        .col-xs-4
+          ul.list-unstyled
+            if (typeof lectures[v]['syll:hasInstructor'] == 'string')
+              li.text-right= people[lectures[v]['syll:hasInstructor']]['foaf:lastName']
+            else
+              each instructor in lectures[v]['syll:hasInstructor']
+                li.text-right= people[instructor]['foaf:lastName']
+    hr.lecture
+
+
+    // Evaluation /////////////////////////////////////////////
+    //
+    .row
+      .col-xs-12
+        h2 Evaluation
+    .row
+      .col-xs-3
+        strong
+          | Quizes:
+      .col-xs-8
+        | 20%
+    .row
+      .col-xs-3
+        strong
+          | Homeworks:
+      .col-xs-8
+        | 20%
+    .row
+      .col-xs-3
+        strong
+          | Project:
+      .col-xs-8
+        | 40%
+    .row
+      .col-xs-3
+        strong
+          | Final Exam:
+      .col-xs-8
+        | 20%
+    .row
+      .col-xs-12
+        p.first
+          | <strong>All homework, quizzes, and tests must be solved and written independently.</strong> 
+          | Students who violate University standards of academic integrity are subject to disciplinary sanctions, 
+          | including failure in the course and suspension from the University. 
+          | Since dishonesty in any form harms the individual, other students, and the University, 
+          | policies on academic integrity will be strictly enforced. 
+          | We expect you to familiarize yourself with the Academic Integrity guidelines found in the current SCampus. 
+          | Violations of the Student Conduct Code will be filed with the Office of Student Conduct, 
+          | and appropriate sanctions will be given.
+
+    // Homeworks /////////////////////////////////////////////
+    //
+    .row
+      .col-xs-12
+        h4 Homeworks
+    .row
+      .col-xs-3
+        strong
+          | Due Date
+      .col-xs-8
+        strong
+          | Topic
+    each uri in homeworks.uris
+      .row
+        .col-xs-3
+          = homeworks[uri]['syll:hasEventDate'].format('YYYY-MM-DD')
+        .col-xs-8
+          = homeworks[uri]['dcterms:title']
+
+    // Quizzes /////////////////////////////////////////////
+    //
+    .row
+      .col-xs-12
+        h4 Quizzes
+    .row
+      .col-xs-12
+        p
+          | There will be a quiz every Monday unless it is a holiday, in which case the quiz will be on Wednesday. 
+          | The quiz will have two parts. 
+          | One part with conceptual questions that test your understanding of the topics covered in the previous week 
+          | (the required readings for the two previous lectures). 
+          | The other part with easy questions that test whether you read the required reading for the day of the quiz.
+
+    // Projects /////////////////////////////////////////////
+    //
+    .row
+      .col-xs-12
+        h4 Projects
+    .row
+      .col-xs-12
+        p
+          | Students will work on in two person groups to develop integrated Web applications 
+          | using the research and tools covered in the class.
+
+    .row
+      .col-xs-3
+        strong
+          | Due Date
+      .col-xs-8
+        strong
+          | Project Event
+    each uri in projects.uris
+      .row
+        .col-xs-3
+          = projects[uri]['syll:hasEventDate'].format('YYYY-MM-DD')
+        .col-xs-8
+          = projects[uri]['dcterms:title']
+
+
+
+
+
