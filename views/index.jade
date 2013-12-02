@@ -80,14 +80,14 @@ block content
     each v in lectures.uris
       hr.lecture
       .row
-        .col-xs-8
+        .col-xs-9
           h4= lectures[v]['dcterms:title']
-        .col-xs-4
+        .col-xs-3
           h4.text-right= lectures[v]['syll:hasEventDate'].format('YYYY-MM-DD')
       .row
-        .col-xs-8
-          p Some text
-        .col-xs-4
+        .col-xs-9
+          p= lectures[v]['dcterms:description']
+        .col-xs-3
           ul.list-unstyled
             if (typeof lectures[v]['syll:hasInstructor'] == 'string')
               li.text-right= people[lectures[v]['syll:hasInstructor']]['foaf:lastName']

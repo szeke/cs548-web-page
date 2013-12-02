@@ -65,49 +65,49 @@
 <http://lod.isi.edu/cs548/person/Szekely> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/Person> .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasInstructor> <http://lod.isi.edu/cs548/person/Szekely> .
 <http://lod.isi.edu/cs548/lecture/l-intro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/Lecture> .
-<http://lod.isi.edu/cs548/lecture/l-intro> <http://purl.org/dc/terms/description> "TBD" .
+<http://lod.isi.edu/cs548/lecture/l-intro> <http://purl.org/dc/terms/description> "Overview of issues that make information integration challenging and the techniques that we will cover in the course to address these challenges.  Disucssion of the grading policy, including the quizzes, homeworks and the final project." .
 <http://lod.isi.edu/cs548/lecture/l-intro> <http://purl.org/dc/terms/identifier> "l:intro" .
-<http://lod.isi.edu/cs548/lecture/l-intro> <http://purl.org/dc/terms/title> "Introduction and Course Overview" .
+<http://lod.isi.edu/cs548/lecture/l-intro> <http://purl.org/dc/terms/title> "Introduction and course overview" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasLecture> <http://lod.isi.edu/cs548/lecture/l-intro> .
 <http://lod.isi.edu/cs548/lecture/l-rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/Lecture> .
-<http://lod.isi.edu/cs548/lecture/l-rdf> <http://purl.org/dc/terms/description> "TBD" .
+<http://lod.isi.edu/cs548/lecture/l-rdf> <http://purl.org/dc/terms/description> "Introduction to the Resource Description Framework (RDF), the langauage of the Semantic Web and the Linked Data Cloud. We will review basic concepts of XML and contrast XML with RDF. Will introduce the concept of URIs, the global graph of data that RDF supports, and the syntax to write RDF documents." .
 <http://lod.isi.edu/cs548/lecture/l-rdf> <http://purl.org/dc/terms/identifier> "l:rdf" .
 <http://lod.isi.edu/cs548/lecture/l-rdf> <http://purl.org/dc/terms/title> "RDF, graph data model" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasLecture> <http://lod.isi.edu/cs548/lecture/l-rdf> .
 <http://lod.isi.edu/cs548/lecture/l-rdfs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/Lecture> .
-<http://lod.isi.edu/cs548/lecture/l-rdfs> <http://purl.org/dc/terms/description> "TBD" .
+<http://lod.isi.edu/cs548/lecture/l-rdfs> <http://purl.org/dc/terms/description> "RDF Schema defines the semantics of RDF graphs. We will introduce the elements of the RDF Schema language and show how these elements enable an RDF database (triple store) to make inferences to derive new information." .
 <http://lod.isi.edu/cs548/lecture/l-rdfs> <http://purl.org/dc/terms/identifier> "l:rdfs" .
-<http://lod.isi.edu/cs548/lecture/l-rdfs> <http://purl.org/dc/terms/title> "RDFS, inference" .
+<http://lod.isi.edu/cs548/lecture/l-rdfs> <http://purl.org/dc/terms/title> "RDF Schema and basic inference" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasLecture> <http://lod.isi.edu/cs548/lecture/l-rdfs> .
 <http://lod.isi.edu/cs548/lecture/l-sparql> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/Lecture> .
-<http://lod.isi.edu/cs548/lecture/l-sparql> <http://purl.org/dc/terms/description> "TBD" .
+<http://lod.isi.edu/cs548/lecture/l-sparql> <http://purl.org/dc/terms/description> "SPARQL is the query language of RDF databases. We will introduce the types of queries that can be expressed in SPARQL and the main elements of the language. We will show how one can query the Linked Data cloud using SPARQL." .
 <http://lod.isi.edu/cs548/lecture/l-sparql> <http://purl.org/dc/terms/identifier> "l:sparql" .
 <http://lod.isi.edu/cs548/lecture/l-sparql> <http://purl.org/dc/terms/title> "SPARQL query language" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasLecture> <http://lod.isi.edu/cs548/lecture/l-sparql> .
 <http://lod.isi.edu/cs548/lecture/l-linked-data> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/Lecture> .
-<http://lod.isi.edu/cs548/lecture/l-linked-data> <http://purl.org/dc/terms/description> "TBD" .
+<http://lod.isi.edu/cs548/lecture/l-linked-data> <http://purl.org/dc/terms/description> "Tim Berners Lee introduced the concept of Linked Data more than 10 years ago. Since then, the Linked Data cloud has grown to more than 30 billion facts covering pretty much any topic you can think of. We will review the principles of Linked Data and provide an overview of the main datasets and vocabularies available in the Linked Data cloud." .
 <http://lod.isi.edu/cs548/lecture/l-linked-data> <http://purl.org/dc/terms/identifier> "l:linked-data" .
 <http://lod.isi.edu/cs548/lecture/l-linked-data> <http://purl.org/dc/terms/title> "Linked Data, common vocabularies/ontologies" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasLecture> <http://lod.isi.edu/cs548/lecture/l-linked-data> .
 <http://lod.isi.edu/cs548/lecture/l-record-linkage-string-matching> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/Lecture> .
-<http://lod.isi.edu/cs548/lecture/l-record-linkage-string-matching> <http://purl.org/dc/terms/description> "TBD" .
+<http://lod.isi.edu/cs548/lecture/l-record-linkage-string-matching> <http://purl.org/dc/terms/description> "Record Linkage is the problem of identifying when two different records refer to the same real world entity (e.g., whether two records about restaurants refer to the same restaurant). Record Linkage is one of the most important problems in information integration. In this class we begin our study of Record Linkage by covering several techniques for fuzzy matching text strings." .
 <http://lod.isi.edu/cs548/lecture/l-record-linkage-string-matching> <http://purl.org/dc/terms/identifier> "l:record-linkage-string-matching" .
-<http://lod.isi.edu/cs548/lecture/l-record-linkage-string-matching> <http://purl.org/dc/terms/title> "Record Linkage \u2013 String Matching" .
+<http://lod.isi.edu/cs548/lecture/l-record-linkage-string-matching> <http://purl.org/dc/terms/title> "Record linkage \u2013 string matching" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasLecture> <http://lod.isi.edu/cs548/lecture/l-record-linkage-string-matching> .
 <http://lod.isi.edu/cs548/lecture/l-record-linkage-record-matching> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/Lecture> .
-<http://lod.isi.edu/cs548/lecture/l-record-linkage-record-matching> <http://purl.org/dc/terms/description> "TBD" .
+<http://lod.isi.edu/cs548/lecture/l-record-linkage-record-matching> <http://purl.org/dc/terms/description> "We continue our study of Record Linkage by reviewing techniques for matching records consisting of multiple attributes. We will review the main algorithms for record linkage and cover optimization technques to avoid the N-squared comparison problem." .
 <http://lod.isi.edu/cs548/lecture/l-record-linkage-record-matching> <http://purl.org/dc/terms/identifier> "l:record-linkage-record-matching" .
-<http://lod.isi.edu/cs548/lecture/l-record-linkage-record-matching> <http://purl.org/dc/terms/title> "Record Linkage \u2013 Record Matching" .
+<http://lod.isi.edu/cs548/lecture/l-record-linkage-record-matching> <http://purl.org/dc/terms/title> "Record linkage \u2013 record matching" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasLecture> <http://lod.isi.edu/cs548/lecture/l-record-linkage-record-matching> .
 <http://lod.isi.edu/cs548/lecture/l-entity-extraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/Lecture> .
-<http://lod.isi.edu/cs548/lecture/l-entity-extraction> <http://purl.org/dc/terms/description> "TBD" .
+<http://lod.isi.edu/cs548/lecture/l-entity-extraction> <http://purl.org/dc/terms/description> "Many structured sources contain unstructured fields (e.g., the biography of a person). We will provide a brief overview of the main techniques to extract entities (people, places and organizations) from text and review several off-the-shelf tools for entity extraction." .
 <http://lod.isi.edu/cs548/lecture/l-entity-extraction> <http://purl.org/dc/terms/identifier> "l:entity-extraction" .
-<http://lod.isi.edu/cs548/lecture/l-entity-extraction> <http://purl.org/dc/terms/title> "Unstructured: Extracting entities and relations from text" .
+<http://lod.isi.edu/cs548/lecture/l-entity-extraction> <http://purl.org/dc/terms/title> "Extracting entities and relations from text" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasLecture> <http://lod.isi.edu/cs548/lecture/l-entity-extraction> .
 <http://lod.isi.edu/cs548/lecture/l-open-information-extraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/Lecture> .
-<http://lod.isi.edu/cs548/lecture/l-open-information-extraction> <http://purl.org/dc/terms/description> "TBD" .
+<http://lod.isi.edu/cs548/lecture/l-open-information-extraction> <http://purl.org/dc/terms/description> "New information extraction techniques are able to extract a wide variety of entities, relations and events from text. These techniques allow you to build large knowledge bases of a wide variety of topics (e.g., the places where famous people where born). Our guest lecturer is a leading expert in open information extrction and will present an overview of these techniques. " .
 <http://lod.isi.edu/cs548/lecture/l-open-information-extraction> <http://purl.org/dc/terms/identifier> "l:open-information-extraction" .
-<http://lod.isi.edu/cs548/lecture/l-open-information-extraction> <http://purl.org/dc/terms/title> "Unstructured: Open Information Extraction" .
+<http://lod.isi.edu/cs548/lecture/l-open-information-extraction> <http://purl.org/dc/terms/title> "Open information extraction" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasLecture> <http://lod.isi.edu/cs548/lecture/l-open-information-extraction> .
 <http://lod.isi.edu/cs548/lecture/l-database-theory-basics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/Lecture> .
 <http://lod.isi.edu/cs548/lecture/l-database-theory-basics> <http://purl.org/dc/terms/description> "TBD" .
@@ -120,29 +120,29 @@
 <http://lod.isi.edu/cs548/lecture/l-glav> <http://purl.org/dc/terms/title> "Answering queries using views (Global-as-View, Local-as-View)" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasLecture> <http://lod.isi.edu/cs548/lecture/l-glav> .
 <http://lod.isi.edu/cs548/lecture/l-data-cleaning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/Lecture> .
-<http://lod.isi.edu/cs548/lecture/l-data-cleaning> <http://purl.org/dc/terms/description> "TBD" .
+<http://lod.isi.edu/cs548/lecture/l-data-cleaning> <http://purl.org/dc/terms/description> "Data cleaning is a major headache in information integration because most datasets contain errors that need to be corrected before the information is usable. We will cover the main types of errors and common techniques for detecting and correcting data errors. We will provide an overview of Google Refine, a popular tool for data cleaning." .
 <http://lod.isi.edu/cs548/lecture/l-data-cleaning> <http://purl.org/dc/terms/identifier> "l:data-cleaning" .
 <http://lod.isi.edu/cs548/lecture/l-data-cleaning> <http://purl.org/dc/terms/title> "Data cleaning" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasLecture> <http://lod.isi.edu/cs548/lecture/l-data-cleaning> .
 <http://lod.isi.edu/cs548/lecture/l-schema-mapping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/Lecture> .
-<http://lod.isi.edu/cs548/lecture/l-schema-mapping> <http://purl.org/dc/terms/description> "TBD" .
+<http://lod.isi.edu/cs548/lecture/l-schema-mapping> <http://purl.org/dc/terms/description> "Different datasets often use different schemas even when they contain information about the same topic. In order to integrate these datasets it is useful to identify a mapping between the attributes in these datasets so that one can combine them into one integrated dataset. In this class we cover techniques for automatically identifying mappings between schemas." .
 <http://lod.isi.edu/cs548/lecture/l-schema-mapping> <http://purl.org/dc/terms/identifier> "l:schema-mapping" .
 <http://lod.isi.edu/cs548/lecture/l-schema-mapping> <http://purl.org/dc/terms/title> "Schema Mapping" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasLecture> <http://lod.isi.edu/cs548/lecture/l-schema-mapping> .
 <http://lod.isi.edu/cs548/lecture/l-rdf-mapping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/Lecture> .
-<http://lod.isi.edu/cs548/lecture/l-rdf-mapping> <http://purl.org/dc/terms/description> "TBD" .
+<http://lod.isi.edu/cs548/lecture/l-rdf-mapping> <http://purl.org/dc/terms/description> "A popular and useful technique for integrating datasets (databases, delimited text files, XML or JSON) is to map them to RDF. Once the datasets are mapped to RDF it becomes possible to query them in an integrated way using SPARQL. In this class we cover techniques for mapping different types of datasets to RDF." .
 <http://lod.isi.edu/cs548/lecture/l-rdf-mapping> <http://purl.org/dc/terms/identifier> "l:rdf-mapping" .
 <http://lod.isi.edu/cs548/lecture/l-rdf-mapping> <http://purl.org/dc/terms/title> "RDF mapping tools" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasLecture> <http://lod.isi.edu/cs548/lecture/l-rdf-mapping> .
 <http://lod.isi.edu/cs548/lecture/l-automatic-modeling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/Lecture> .
-<http://lod.isi.edu/cs548/lecture/l-automatic-modeling> <http://purl.org/dc/terms/description> "TBD" .
+<http://lod.isi.edu/cs548/lecture/l-automatic-modeling> <http://purl.org/dc/terms/description> "Mapping datasets to RDF can be difficult and time-consuming. In this class we cover different techniques for automatically mapping a dataset to a domain ontology (RDF Schema)." .
 <http://lod.isi.edu/cs548/lecture/l-automatic-modeling> <http://purl.org/dc/terms/identifier> "l:automatic-modeling" .
-<http://lod.isi.edu/cs548/lecture/l-automatic-modeling> <http://purl.org/dc/terms/title> "Automatic Source Modeling" .
+<http://lod.isi.edu/cs548/lecture/l-automatic-modeling> <http://purl.org/dc/terms/title> "Automatic source modeling" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasLecture> <http://lod.isi.edu/cs548/lecture/l-automatic-modeling> .
 <http://lod.isi.edu/cs548/lecture/l-karma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/Lecture> .
 <http://lod.isi.edu/cs548/lecture/l-karma> <http://purl.org/dc/terms/description> "TBD" .
 <http://lod.isi.edu/cs548/lecture/l-karma> <http://purl.org/dc/terms/identifier> "l:karma" .
-<http://lod.isi.edu/cs548/lecture/l-karma> <http://purl.org/dc/terms/title> "Karma, Semi-automatic source modeling" .
+<http://lod.isi.edu/cs548/lecture/l-karma> <http://purl.org/dc/terms/title> "Karma, semi-automatic source modeling" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasLecture> <http://lod.isi.edu/cs548/lecture/l-karma> .
 <http://lod.isi.edu/cs548/lecture/l-owl2-basics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/Lecture> .
 <http://lod.isi.edu/cs548/lecture/l-owl2-basics> <http://purl.org/dc/terms/description> "TBD" .
