@@ -140,17 +140,17 @@
 <http://lod.isi.edu/cs548/lecture/l-automatic-modeling> <http://purl.org/dc/terms/title> "Automatic source modeling" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasLecture> <http://lod.isi.edu/cs548/lecture/l-automatic-modeling> .
 <http://lod.isi.edu/cs548/lecture/l-karma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/Lecture> .
-<http://lod.isi.edu/cs548/lecture/l-karma> <http://purl.org/dc/terms/description> "TBD" .
+<http://lod.isi.edu/cs548/lecture/l-karma> <http://purl.org/dc/terms/description> "Karma is our own tool for semi-automatically mapping a variety of sources to a domain model defined using an ontology or an RDF Schema. In this class we will cover the algorithms that Karma uses to learn from previous mappings and the algorithms to automatically suggest models for new sources." .
 <http://lod.isi.edu/cs548/lecture/l-karma> <http://purl.org/dc/terms/identifier> "l:karma" .
 <http://lod.isi.edu/cs548/lecture/l-karma> <http://purl.org/dc/terms/title> "Karma, semi-automatic source modeling" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasLecture> <http://lod.isi.edu/cs548/lecture/l-karma> .
 <http://lod.isi.edu/cs548/lecture/l-owl2-basics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/Lecture> .
-<http://lod.isi.edu/cs548/lecture/l-owl2-basics> <http://purl.org/dc/terms/description> "TBD" .
+<http://lod.isi.edu/cs548/lecture/l-owl2-basics> <http://purl.org/dc/terms/description> "OWL, the Web Ontology Language is the standard language for defining ontologies in the Semantic Web. OWL ontologies define the semantics of classes and properties and allow inferences to be made to derive new facts. In this class we cover the main OWL constructs and how they allow a system to infer new facts." .
 <http://lod.isi.edu/cs548/lecture/l-owl2-basics> <http://purl.org/dc/terms/identifier> "l:owl2-basics" .
 <http://lod.isi.edu/cs548/lecture/l-owl2-basics> <http://purl.org/dc/terms/title> "OWL2: Description Logics, Inference" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasLecture> <http://lod.isi.edu/cs548/lecture/l-owl2-basics> .
 <http://lod.isi.edu/cs548/lecture/l-owl2-profiles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/Lecture> .
-<http://lod.isi.edu/cs548/lecture/l-owl2-profiles> <http://purl.org/dc/terms/description> "TBD" .
+<http://lod.isi.edu/cs548/lecture/l-owl2-profiles> <http://purl.org/dc/terms/description> "Full OWL reasoning is computationally expensive (exponential) and thus impractical for most applications. The OWL profiles define subsets of OWL where the reasoning algorithms perform efficiently. In this class we introduce the most common OWL profiles, review the reasoning capabilities that they support and illustrate them in practical settings." .
 <http://lod.isi.edu/cs548/lecture/l-owl2-profiles> <http://purl.org/dc/terms/identifier> "l:owl2-profiles" .
 <http://lod.isi.edu/cs548/lecture/l-owl2-profiles> <http://purl.org/dc/terms/title> "OWL2 Profiles: QL, EL, RL" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasLecture> <http://lod.isi.edu/cs548/lecture/l-owl2-profiles> .
@@ -160,32 +160,32 @@
 <http://lod.isi.edu/cs548/lecture/l-ontology-based-integration> <http://purl.org/dc/terms/title> "Ontology-based data integration" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasLecture> <http://lod.isi.edu/cs548/lecture/l-ontology-based-integration> .
 <http://lod.isi.edu/cs548/lecture/l-linked-services> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/Lecture> .
-<http://lod.isi.edu/cs548/lecture/l-linked-services> <http://purl.org/dc/terms/description> "TBD" .
+<http://lod.isi.edu/cs548/lecture/l-linked-services> <http://purl.org/dc/terms/description> "A significant amount of data on the Web is available via Web APIs. These APIs typically return their data in XML or JSON. In this class we review techniques for modeling Web APIs to make them easy to discover and to wrap them so that they can consume and produce RDF. This makes it possible to integrate them with other Linked Data sources." .
 <http://lod.isi.edu/cs548/lecture/l-linked-services> <http://purl.org/dc/terms/identifier> "l:linked-services" .
 <http://lod.isi.edu/cs548/lecture/l-linked-services> <http://purl.org/dc/terms/title> "Linked Services" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasLecture> <http://lod.isi.edu/cs548/lecture/l-linked-services> .
 <http://lod.isi.edu/cs548/lecture/l-wrapper-generation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/Lecture> .
-<http://lod.isi.edu/cs548/lecture/l-wrapper-generation> <http://purl.org/dc/terms/description> "TBD" .
+<http://lod.isi.edu/cs548/lecture/l-wrapper-generation> <http://purl.org/dc/terms/description> "Most of the information on the Web is available on Web pages, and often is not available in a structured format or a Web API. Web wrappers are programs that extract data from Web pages and return it in a structured format, typically XML. Several libraries exist for programmers to develop such wrappers. There has been significant research on techniques to generate wrappers by example so that users who don't know how to program can generate wrappers. In this lecture we cover several systems that use this approch and discuss the algorithms that they use." .
 <http://lod.isi.edu/cs548/lecture/l-wrapper-generation> <http://purl.org/dc/terms/identifier> "l:wrapper-generation" .
 <http://lod.isi.edu/cs548/lecture/l-wrapper-generation> <http://purl.org/dc/terms/title> "Semi-structured Data: Wrapper Generation" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasLecture> <http://lod.isi.edu/cs548/lecture/l-wrapper-generation> .
 <http://lod.isi.edu/cs548/lecture/l-wrapper-learning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/Lecture> .
-<http://lod.isi.edu/cs548/lecture/l-wrapper-learning> <http://purl.org/dc/terms/description> "TBD" .
+<http://lod.isi.edu/cs548/lecture/l-wrapper-learning> <http://purl.org/dc/terms/description> "An alternative approach to generating wrappers from examples is to automatically learn the wrappers given a set of Web pages. In this class we discuss techinques that enable a system to discover differences in pages and use this information to automatically generate a wrapper to extract information from Web pages." .
 <http://lod.isi.edu/cs548/lecture/l-wrapper-learning> <http://purl.org/dc/terms/identifier> "l:wrapper-learning" .
 <http://lod.isi.edu/cs548/lecture/l-wrapper-learning> <http://purl.org/dc/terms/title> "Semi-structured Data: Wrapper Learning" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasLecture> <http://lod.isi.edu/cs548/lecture/l-wrapper-learning> .
 <http://lod.isi.edu/cs548/lecture/l-mashup-principles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/Lecture> .
-<http://lod.isi.edu/cs548/lecture/l-mashup-principles> <http://purl.org/dc/terms/description> "TBD" .
+<http://lod.isi.edu/cs548/lecture/l-mashup-principles> <http://purl.org/dc/terms/description> "Mashups are applications that combine information from multiple Web sites and Web APIs to build an interesting new application. In this calls we discuss the main techniques that have been used to create mashups and describe interesting research systemts that incorporate these techniques." .
 <http://lod.isi.edu/cs548/lecture/l-mashup-principles> <http://purl.org/dc/terms/identifier> "l:mashup-principles" .
 <http://lod.isi.edu/cs548/lecture/l-mashup-principles> <http://purl.org/dc/terms/title> "Mashups: principles" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasLecture> <http://lod.isi.edu/cs548/lecture/l-mashup-principles> .
 <http://lod.isi.edu/cs548/lecture/l-mashup-tools> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/Lecture> .
-<http://lod.isi.edu/cs548/lecture/l-mashup-tools> <http://purl.org/dc/terms/description> "TBD" .
+<http://lod.isi.edu/cs548/lecture/l-mashup-tools> <http://purl.org/dc/terms/description> "In this class we focus on techniques for building mashups using Web APIs. We begin by introducing the principles of RESTful APIs and illustrating these principles using examples. Then we cover two interesting systems that allow users to quickly and easily construct mashups using Web APIs." .
 <http://lod.isi.edu/cs548/lecture/l-mashup-tools> <http://purl.org/dc/terms/identifier> "l:mashup-tools" .
 <http://lod.isi.edu/cs548/lecture/l-mashup-tools> <http://purl.org/dc/terms/title> "Mashups: Yahoo Pipes & YQL, REST" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasLecture> <http://lod.isi.edu/cs548/lecture/l-mashup-tools> .
 <http://lod.isi.edu/cs548/lecture/l-big-data> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/Lecture> .
-<http://lod.isi.edu/cs548/lecture/l-big-data> <http://purl.org/dc/terms/description> "TBD" .
+<http://lod.isi.edu/cs548/lecture/l-big-data> <http://purl.org/dc/terms/description> "Lately, there has been significant interest in NoSQL databases that support parallel distributed analysis of large datasets on commodity hardware. In this lecture we explore the latest ideas for using NoSQL databases for storing Linked Data at large scale." .
 <http://lod.isi.edu/cs548/lecture/l-big-data> <http://purl.org/dc/terms/identifier> "l:big-data" .
 <http://lod.isi.edu/cs548/lecture/l-big-data> <http://purl.org/dc/terms/title> "Big Data" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasLecture> <http://lod.isi.edu/cs548/lecture/l-big-data> .
@@ -195,17 +195,17 @@
 <http://lod.isi.edu/cs548/lecture/l-intellectual-property> <http://purl.org/dc/terms/title> "Intellectual Property" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasLecture> <http://lod.isi.edu/cs548/lecture/l-intellectual-property> .
 <http://lod.isi.edu/cs548/lecture/l-review> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/Lecture> .
-<http://lod.isi.edu/cs548/lecture/l-review> <http://purl.org/dc/terms/description> "TBD" .
+<http://lod.isi.edu/cs548/lecture/l-review> <http://purl.org/dc/terms/description> "In this class we review all the topics covered during the semester highlighting the main ideas and techniques." .
 <http://lod.isi.edu/cs548/lecture/l-review> <http://purl.org/dc/terms/identifier> "l:review" .
 <http://lod.isi.edu/cs548/lecture/l-review> <http://purl.org/dc/terms/title> "Review" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasLecture> <http://lod.isi.edu/cs548/lecture/l-review> .
 <http://lod.isi.edu/cs548/lecture/l-project-presentations-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/Lecture> .
-<http://lod.isi.edu/cs548/lecture/l-project-presentations-1> <http://purl.org/dc/terms/description> "TBD" .
+<http://lod.isi.edu/cs548/lecture/l-project-presentations-1> <http://purl.org/dc/terms/description> "Students present their papers. The presentations will use the Pecha-Kucha format where students present the projects in 6 minutes in 40 seconds using 20 slides in auto-advance mode every 20 seconds. We used this technique for the first time in Fall 2013 and it was a huge success, so we will continue using this format." .
 <http://lod.isi.edu/cs548/lecture/l-project-presentations-1> <http://purl.org/dc/terms/identifier> "l:project-presentations-1" .
 <http://lod.isi.edu/cs548/lecture/l-project-presentations-1> <http://purl.org/dc/terms/title> "Project Presentations" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasLecture> <http://lod.isi.edu/cs548/lecture/l-project-presentations-1> .
 <http://lod.isi.edu/cs548/lecture/l-project-presentations-2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/Lecture> .
-<http://lod.isi.edu/cs548/lecture/l-project-presentations-2> <http://purl.org/dc/terms/description> "TBD" .
+<http://lod.isi.edu/cs548/lecture/l-project-presentations-2> <http://purl.org/dc/terms/description> "Second day of project presentations using the Pecha-Kucha style." .
 <http://lod.isi.edu/cs548/lecture/l-project-presentations-2> <http://purl.org/dc/terms/identifier> "l:project-presentations-2" .
 <http://lod.isi.edu/cs548/lecture/l-project-presentations-2> <http://purl.org/dc/terms/title> "Project Presentations" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasLecture> <http://lod.isi.edu/cs548/lecture/l-project-presentations-2> .

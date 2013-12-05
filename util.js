@@ -16,7 +16,7 @@ module.exports = {
 			var fileName = fileArray[i];
 			var rdf = fs.readFileSync(fileName).toString();
 			store.load('text/turtle', rdf, function(s, d) {
-				console.log("Loaded " + d + " triples from " + fileName);
+				console.log("Loaded " + d + " triples.");
 				filesLoaded += 1;
 				if (filesLoaded == fileArray.length) {
 					f(store);
