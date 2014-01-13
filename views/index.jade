@@ -83,7 +83,7 @@ block content
         .col-xs-9
           h4= lectures[v]['dcterms:title']
         .col-xs-3
-          h4.text-right= lectures[v]['syll:hasEventDate'].format('YYYY-MM-DD')
+          h4.text-right= lectures[v]['syll:hasEventDate']
       .row
         .col-xs-9
           p= lectures[v]['dcterms:description']
@@ -142,7 +142,7 @@ block content
     each uri in homeworks.uris
       .row
         .col-xs-3
-          = homeworks[uri]['syll:hasEventDate'].format('YYYY-MM-DD')
+          = homeworks[uri]['syll:hasEventDate']
         .col-xs-8
           = homeworks[uri]['dcterms:title']
 
@@ -181,7 +181,7 @@ block content
     each uri in projects.uris
       .row
         .col-xs-3
-          = projects[uri]['syll:hasEventDate'].format('YYYY-MM-DD')
+          = projects[uri]['syll:hasEventDate']
         .col-xs-8
           = projects[uri]['dcterms:title']
 
