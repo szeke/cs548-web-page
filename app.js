@@ -35,7 +35,7 @@ var topLevelUri = 'http://lod.isi.edu/course/cs548/2014/spring'
 
 // The files containing the RDF for our web site.
 //
-var rdfFiles = [ 'data/events.ttl', 'data/people.ttl', 'data/schedule.ttl' ];
+var rdfFiles = [ 'data/events.n3', 'data/people.n3', 'data/schedule.n3' ];
 
 // Once we load the RDF into our triple store, we will run the following queries to build
 // the JSON data that defines the page. The queries get the URIs that define the main 
