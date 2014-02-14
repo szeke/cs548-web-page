@@ -146,7 +146,7 @@ function serveRequest(req,res){
     		}
 		});
 	}, function(){ // Called after all the iterator functions have finished
-		console.log(pagedata);
+		//console.log(pagedata);
 		res.render("index",pagedata);
 	});
 }
