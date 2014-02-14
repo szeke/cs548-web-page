@@ -5,6 +5,7 @@ Application to generate the web page for the CS 548 course on information integr
 
 npm install express stylus nib jade rdfstore jsonld date-format-lite sparql-client async  
 
+
 node app
 
 Visit http://localhost:3000
