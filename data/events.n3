@@ -1,18 +1,21 @@
 <http://lod.isi.edu/cs548/homework/hw-academic-integrity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/Homework> .
 <http://lod.isi.edu/cs548/homework/hw-academic-integrity> <http://purl.org/dc/terms/identifier> "hw:academic-integrity" .
+<http://lod.isi.edu/cs548/homework/hw-academic-integrity> <http://purl.org/dc/terms/description> "Sign the Trojan academic integrity document" .
 <http://lod.isi.edu/cs548/homework/hw-academic-integrity> <http://purl.org/dc/terms/title> "Sign USC academic integrity rules" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/Course> .
+<http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasClassroom> "ZHS 163" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://www.w3.org/2000/01/rdf-schema#label> "CS548" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasHomework> <http://lod.isi.edu/cs548/homework/hw-academic-integrity> .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://purl.org/dc/terms/title> "Information Integration on the Web (CS 548)" .
-<http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasClassroom> "ZHS 163" .
 <http://lod.isi.edu/cs548/homework/hw-rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/Homework> .
 <http://lod.isi.edu/cs548/homework/hw-rdf> <http://purl.org/dc/terms/identifier> "hw:rdf" .
+<http://lod.isi.edu/cs548/homework/hw-rdf> <http://purl.org/dc/terms/description> "RDF graphs" .
 <http://lod.isi.edu/cs548/homework/hw-rdf> <http://purl.org/dc/terms/title> "RDF Graphs" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasHomework> <http://lod.isi.edu/cs548/homework/hw-rdf> .
 <http://lod.isi.edu/cs548/homework/hw-sparql> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/Homework> .
 <http://lod.isi.edu/cs548/homework/hw-sparql> <http://purl.org/dc/terms/identifier> "hw:sparql" .
-<http://lod.isi.edu/cs548/homework/hw-sparql> <http://purl.org/dc/terms/title> "SPARQL, the RDF Query Language" .
+<http://lod.isi.edu/cs548/homework/hw-sparql> <http://purl.org/dc/terms/description> "Writing SPARQL queries" .
+<http://lod.isi.edu/cs548/homework/hw-sparql> <http://purl.org/dc/terms/title> "SPARQL the RDF Query Language" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasHomework> <http://lod.isi.edu/cs548/homework/hw-sparql> .
 <http://lod.isi.edu/cs548/homework/hw-karma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/Homework> .
 <http://lod.isi.edu/cs548/homework/hw-karma> <http://purl.org/dc/terms/identifier> "hw:karma" .
@@ -35,28 +38,28 @@
 <http://lod.isi.edu/cs548/homework/hw-information-extraction> <http://purl.org/dc/terms/title> "Using Information Extraction Tools to Extract Entities from Text" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasHomework> <http://lod.isi.edu/cs548/homework/hw-information-extraction> .
 <http://lod.isi.edu/cs548/project/project-form-groups> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/ProjectEvent> .
-<http://lod.isi.edu/cs548/project/project-form-groups> <http://purl.org/dc/terms/title> "Form project groups" .
 <http://lod.isi.edu/cs548/project/project-form-groups> <http://purl.org/dc/terms/identifier> "project:form-groups" .
+<http://lod.isi.edu/cs548/project/project-form-groups> <http://purl.org/dc/terms/title> "Form project groups" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasProjectEvent> <http://lod.isi.edu/cs548/project/project-form-groups> .
 <http://lod.isi.edu/cs548/project/project-proposal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/ProjectEvent> .
-<http://lod.isi.edu/cs548/project/project-proposal> <http://purl.org/dc/terms/title> "Project Proposal" .
 <http://lod.isi.edu/cs548/project/project-proposal> <http://purl.org/dc/terms/identifier> "project:proposal" .
+<http://lod.isi.edu/cs548/project/project-proposal> <http://purl.org/dc/terms/title> "Project Proposal" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasProjectEvent> <http://lod.isi.edu/cs548/project/project-proposal> .
 <http://lod.isi.edu/cs548/project/project-presentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/ProjectEvent> .
-<http://lod.isi.edu/cs548/project/project-presentation> <http://purl.org/dc/terms/title> "Project Presentations" .
 <http://lod.isi.edu/cs548/project/project-presentation> <http://purl.org/dc/terms/identifier> "project:presentation" .
+<http://lod.isi.edu/cs548/project/project-presentation> <http://purl.org/dc/terms/title> "Project Presentations" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasProjectEvent> <http://lod.isi.edu/cs548/project/project-presentation> .
 <http://lod.isi.edu/cs548/project/project-paper> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/ProjectEvent> .
-<http://lod.isi.edu/cs548/project/project-paper> <http://purl.org/dc/terms/title> "Project Paper" .
 <http://lod.isi.edu/cs548/project/project-paper> <http://purl.org/dc/terms/identifier> "project:paper" .
+<http://lod.isi.edu/cs548/project/project-paper> <http://purl.org/dc/terms/title> "Project Paper" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasProjectEvent> <http://lod.isi.edu/cs548/project/project-paper> .
 <http://lod.isi.edu/cs548/project/project-video> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/ProjectEvent> .
-<http://lod.isi.edu/cs548/project/project-video> <http://purl.org/dc/terms/title> "Project Video" .
 <http://lod.isi.edu/cs548/project/project-video> <http://purl.org/dc/terms/identifier> "project:video" .
+<http://lod.isi.edu/cs548/project/project-video> <http://purl.org/dc/terms/title> "Project Video" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasProjectEvent> <http://lod.isi.edu/cs548/project/project-video> .
 <http://lod.isi.edu/cs548/project/project-demonstration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/ProjectEvent> .
-<http://lod.isi.edu/cs548/project/project-demonstration> <http://purl.org/dc/terms/title> "Project Online Demonstration" .
 <http://lod.isi.edu/cs548/project/project-demonstration> <http://purl.org/dc/terms/identifier> "project:demonstration" .
+<http://lod.isi.edu/cs548/project/project-demonstration> <http://purl.org/dc/terms/title> "Project Online Demonstration" .
 <http://lod.isi.edu/course/cs548/2014/spring> <http://lod.isi.edu/ontology/syllabus/hasProjectEvent> <http://lod.isi.edu/cs548/project/project-demonstration> .
 <http://lod.isi.edu/cs548/lecture/l-intro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lod.isi.edu/ontology/syllabus/Lecture> .
 <http://lod.isi.edu/cs548/lecture/l-intro> <http://purl.org/dc/terms/identifier> "l:intro" .
