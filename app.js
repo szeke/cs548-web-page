@@ -1,5 +1,4 @@
-var rdfstore =  fs = require('fs')
-  , express = require('express')
+var express = require('express')
   , stylus = require('stylus')
   , nib = require('nib')
   , util = require('./util')

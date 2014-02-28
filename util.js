@@ -1,8 +1,3 @@
-var rdfstore = require('rdfstore')
-	, server = require('./node_modules/rdfstore/server').Server
-	, fs = require('fs');
-
-
 module.exports = {
 
 sortData: function(results,globalData,parsedJSON, sortCriteria,object){
