@@ -1,19 +1,14 @@
-var rdfstore = require('rdfstore')
-  , server = require('./node_modules/rdfstore/server').Server
-  , fs = require('fs')
+var rdfstore =  fs = require('fs')
   , express = require('express')
   , stylus = require('stylus')
   , nib = require('nib')
   , util = require('./util')
   , dateFormat = require("date-format-lite")
-  , jsonld = require('jsonld')
-  , sparqlClient =  require('sparql-client')
   , async = require('async')
+  , http = require('http')
 ;
 
-
-// Set up Express stuff.
-//
+//Set up Express stuff.
 var app = express();
 
 function compile(str, path) {
@@ -31,122 +26,99 @@ app.use(stylus.middleware(
 ))
 app.use(express.static(__dirname + '/public'))
 
-//register for GET request
-app.get('/', serveRequest);
+var courseUri = 'http://lod.isi.edu/course/cs548/2014/spring';
 
-// The top level object
-//
-var topLevelUri = 'http://lod.isi.edu/course/cs548/2014/spring'
+var endpoint = '/openrdf-sesame/repositories/cs548?query=';
+var query = "CONSTRUCT { ?s ?p ?o } where { ?s ?p ?o }";
 
-var syllPrefix = 'PREFIX syll: <http://lod.isi.edu/ontology/syllabus/>';	
 
-var foafPrefix = 'PREFIX foaf: <http://xmlns.com/foaf/0.1/>';
-	
-// The files containing the RDF for our web site.
-//
-var rdfFiles = [ 'data/events.n3', 'data/people.n3', 'data/schedule.n3' ];
-
-// Once we load the RDF into our triple store, we will run the following queries to build
-// the JSON data that defines the page. The queries get the URIs that define the main 
-// content areas, and then we fetch all the properties of each URI as a JSON-LD object, 
-// which is much nicer to deal with than SPARQL result sets.
-//
-var queries = [
-               { 
-                 query: syllPrefix+" SELECT ?uri ?date { ?uri a syll:Lecture ; syll:hasEventDate ?date . } ORDER BY ?date DESC(?date)" ,
-                 callback: function (results, globalData, store) {
-                   globalData.lectures = new Object();
-                   util.uriToJSONLD(results, globalData.lectures, store);
-                 }
-               } ,
-               { 
-                 query: syllPrefix+" SELECT ?uri ?date { ?uri a syll:Homework ; syll:hasEventDate ?date . } ORDER BY ?date DESC(?date)" ,
-                 callback: function (results, globalData, store) {
-                   globalData.homeworks = new Object();
-                   util.uriToJSONLD(results, globalData.homeworks, store);
-                 }
-               } ,
-               { 
-                 query: syllPrefix+" SELECT ?uri ?date { ?uri a syll:ProjectEvent ; syll:hasEventDate ?date . } ORDER BY ?date DESC(?date)" ,
-                 callback: function (results, globalData, store) {
-                   globalData.projects = new Object();
-                   util.uriToJSONLD(results, globalData.projects, store);
-                 }
-               } ,
-               {
-                 query: syllPrefix+" SELECT ?uri { ?uri a syll:Person . }" ,
-                 callback: function (results, globalData, store) {
-                   globalData.people = new Object();
-                   util.uriToJSONLD(results, globalData.people, store);
-                 }
-               } ,
-               {
-                 query: syllPrefix+" "+foafPrefix+" SELECT ?uri { <"+topLevelUri+"> syll:hasInstructor ?uri . ?uri foaf:lastName ?lastName . } ORDER BY ?lastName ASC(?lastName)" ,
-                 callback: function (results, globalData, store) {
-                   globalData.instructors = new Array();
-                   for (var i = 0; i < results.length; i++) {
-                     globalData.instructors.push(results[i].uri.value);
-                   };
-                 }
-               } , 
-               {
-                 query: "SELECT ?uri { <"+topLevelUri+"> <http://vivoweb.org/ontology/core#hasPrerequisite> ?uri . }" ,
-                 callback: function (results, globalData, store) {
-                   globalData.prerequisites = new Object();
-                   util.uriToJSONLD(results, globalData.prerequisites, store);
-                 }
-               }
+var uris = [
+           {
+            	uriString: 'http://lod.isi.edu/ontology/syllabus/hasInstructor',
+            	createObject: function(results, globalData) {
+            		globalData.instructors = results;
+            	}
+            },
+            {
+            	uriString: 'http://vivoweb.org/ontology/core#hasPrerequisite',
+            	createObject: function(results, globalData) {
+            		globalData.prerequisites = results;
+            	}
+            	
+            },
+            {
+            	uriString: 'http://lod.isi.edu/ontology/syllabus/hasProjectEvent',
+            	createObject: function(results, globalData,parsedJSON) {
+            		util.sortData(results,globalData,parsedJSON,'http://lod.isi.edu/ontology/syllabus/hasEventDate','projectevents');
+            	}
+            },
+            {
+            	uriString: 'http://lod.isi.edu/ontology/syllabus/hasHomework',
+            	createObject: function(results, globalData,parsedJSON) {
+            		util.sortData(results,globalData,parsedJSON,'http://lod.isi.edu/ontology/syllabus/hasEventDate','homeworks');
+            	}
+            	
+            } , 
+          
+            {
+            	uriString: 'http://lod.isi.edu/ontology/syllabus/hasLecture',
+            	createObject: function(results, globalData,parsedJSON) {
+            		util.sortData(results,globalData,parsedJSON,'http://lod.isi.edu/ontology/syllabus/hasEventDate','lectures');
+            	}
+            }
 ];
 
-
-//Set up sparql-client stuff
-var endpoint = 'http://localhost:8080/openrdf-sesame/repositories/cs548';
-var client = new sparqlClient(endpoint);
-
-// This is the callback function after we load all the RDF files.
-// It builds the JSON data for the web site
-function createJsonAndStartApp(store) {
-	var pageData = { store: store };
-	store.node(topLevelUri, function(success, graph) {
-    var doc = server.graphToJSONLD(graph, store.rdf);
-    pageData['topLevel'] = doc[0];
-    console.log(pageData);
-    util.setGlobalData(pageData);
-	util.setStore(store);
-	app.listen(3000);
-	console.log("Listening on port 3000");   
-   
- });
-}
-	
-//Main program: create the store and get things going.
-//
-rdfstore.create(function(store) {
-  store.registerDefaultProfileNamespaces();
-  store.registerDefaultNamespace('syll', 'http://lod.isi.edu/ontology/syllabus/');
-  store.registerDefaultNamespace('lecture', 'http://lod.isi.edu/cs548/lecture/')
-  util.loadRdfFiles(store, rdfFiles, createJsonAndStartApp);
-}) ;
-
+//register for GET request
+app.get('/', serveRequest);
+app.listen(3000);
+console.log("Listening on port 3000");
 
 //It serves the request for the index page.
-function serveRequest(req,res){
-	var pagedata = util.getGlobalData();
-	var store = util.getStore();
-	async.forEachSeries(queries,function(item,callback_1) {
-		var obj;
-		client.query(item.query).execute(function(error, results) {
-			if(results != null) {
-				obj = JSON.parse(JSON.stringify(results));
-				item.callback(obj.results.bindings,pagedata, store);
-				callback_1(); // Tell async that the current iterator task is finished.
-			}
-			else if(error != null) {
-    			console.log(error);
-    		}
-		});
-	}, function(){ // Called after all the iterator functions have finished
-		console.log(pagedata);
-		res.render("index",pagedata);
+function serveRequest(req,resp){
+	var pagedata = new Object();
+	var data = '';
+	async.series([
+	              function(callback){
+	              //1. Get all the triples from the endpoint
+	          		var encodedquerystring = encodeURIComponent(query);
+	          		var options = {
+	        		    host: 'localhost',
+	        		    port: 8080,
+	        		    path: endpoint +encodedquerystring,
+	        	        headers: {
+	        	            'Content-Type': 'application/x-www-form-urlencoded',
+	        	            'Accept': 'application/rdf+json',
+	        	        }
+	        		  };
+	    		
+	          		var req = http.get(options, function(res) {
+	        	    res.on('data', function (chunk) {
+	        	      data += chunk;
+	        	    });
+	        	    res.on('end', function () {
+	        	    	//console.log(data);
+	        	    	callback(); //the current task is finished, go onto the next task.
+	        	    });
+	        	  }).on('error', function(e) {
+	        	    console.log("Got error: " + e.message);
+	        	  });
+	              },
+	              
+	              function(callback) {
+	              //2. Construct data to be rendered by jade
+	            	  var parsedJSON = JSON.parse(data);
+	            	  pagedata.course = parsedJSON[courseUri];
+	            	  pagedata.alltriples = parsedJSON;
+	            	  uris.forEach(function(entry){
+                  		var results = pagedata.course[entry.uriString];
+                  		console.log(results);
+                  		entry.createObject(results,pagedata,parsedJSON);
+                  	});
+	            	  callback();
+	              }
+	              
+	], function(){
+		//3. render the page.
+		resp.render("index",pagedata);
 	});
 }
