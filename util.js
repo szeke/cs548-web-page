@@ -2,59 +2,32 @@ var rdfstore = require('rdfstore')
 	, server = require('./node_modules/rdfstore/server').Server
 	, fs = require('fs');
 
-var dataForTemplate;
-var globalStore;
 
 module.exports = {
+
+sortData: function(results,globalData,parsedJSON, sortCriteria,object){
 		
-getStore: function() {
-	return globalStore;
-},
-		
-getGlobalData: function() {
-	return dataForTemplate;	
-},	
-
-setGlobalData: function(data) {
-	dataForTemplate = data;
-},
-
-setStore: function(store){
-	globalStore = store;
-},	
-
-	/**
-	 * Load several RDF files in turtle format and call f when they are all loaded.
-	 * @param {store} the rdfstore where we will load the triples.
-	 * @param {fileArray} an array of file names to load.
-	 * @return {f} callback function to call when all files are loaded f(store).
-	 */
-	loadRdfFiles: function(store, fileArray, f) {
-		var filesLoaded = 0;
-
-		for (var i = 0; i < fileArray.length; i++) {
-			var fileName = fileArray[i];
-			var rdf = fs.readFileSync(fileName).toString();
-			store.load('text/turtle', rdf, function(s, d) {
-				console.log("Loaded " + d + " triples.");
-				filesLoaded += 1;
-				if (filesLoaded == fileArray.length) {
-					f(store);
-				}
-			});
-		}
-	} ,
-    
-  uriToJSONLD: function (results, object, store) {
-	  object['uris'] = new Array();
-	  for(var i = 0; i < results.length; i++) {
-	    var uri = results[i].uri.value;
-	    store.node(uri, function(success, graph) {
-	      var doc = server.graphToJSONLD(graph, store.rdf);
-	    // console.log(doc);
-	      object[uri] = doc[0];
-	      object['uris'].push(uri);
-	    });
-	  }
-	} 		
+		globalData[object]= new Array();
+		var sortCriteriaArray = new Array();
+		var arr = new Array();
+		 for (var i = 0; i < results.length; i++) {
+			 var uri = results[i].value;
+			 var date = parsedJSON[uri][sortCriteria];
+			 if(date){
+				 var dateValue = parsedJSON[uri][sortCriteria][0].value;
+				 var r = i * 2  ;
+				 arr[r] = dateValue;
+				 r = r + 1;
+				 arr[r] = uri;
+				 sortCriteriaArray.push(dateValue);
+			 }
+		 }
+		 sortCriteriaArray.sort();
+		 for (var i = 0; i < sortCriteriaArray.length; i++) {
+			 var index = arr.indexOf(sortCriteriaArray[i]);
+			 var j = index + 1;
+			 globalData[object].push(arr[j]); 
+			 arr.splice(index,2);
+		 }
+	}
 };

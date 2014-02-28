@@ -1,7 +1,7 @@
 extend layout
 block content
   header
-    h1= topLevel['dcterms:title']
+    h1= course['http://purl.org/dc/terms/title'][0].value
 
     .row
       .col-xs-2
@@ -9,9 +9,9 @@ block content
         .col-xs-4
           div
             p
-              img(src=people[v]['foaf:depiction']) 
+              img(src=alltriples[v.value]['http://xmlns.com/foaf/0.1/depiction'][0].value) 
             p
-              a(href=people[v]['foaf:homepage']) #{people[v]['foaf:title']} #{people[v]['foaf:name']}
+              a(href=alltriples[v.value]['http://xmlns.com/foaf/0.1/homepage'][0].value) #{alltriples[v.value]['http://xmlns.com/foaf/0.1/title'][0].value} #{alltriples[v.value]['http://xmlns.com/foaf/0.1/name'][0].value}
   .container
     .row
       .col-xs-12 
@@ -34,9 +34,9 @@ block content
         strong
           | Prerequisites (can be waived):
       .col-xs-8
-        each uri, index in topLevel['hasPrerequisite']
-          = prerequisites[uri]['rdfs:label'] 
-          if (index < topLevel['hasPrerequisite'].length - 1)
+        each uri, index in prerequisites
+          = alltriples[uri.value]['http://www.w3.org/2000/01/rdf-schema#label'][0].value
+          if (index < prerequisites.length - 1)
             span= ", "
     .row
       .col-xs-4
@@ -49,14 +49,14 @@ block content
         strong
           | Location:
       .col-xs-8
-        = topLevel['syll:hasClassroom']
+        = course['http://lod.isi.edu/ontology/syllabus/hasClassroom'][0].value
     .row
       .col-xs-4
         strong
           | Teaching Assistant (tentative):
       .col-xs-8
-        - var taUri = topLevel['syll:hasTeachingAssistant']
-        a(href=people[taUri]['foaf:homepage']) #{people[taUri]['foaf:name']}
+        - var taUri = course['http://lod.isi.edu/ontology/syllabus/hasTeachingAssistant']
+         a(href='') #{alltriples[taUri[0].value]['http://xmlns.com/foaf/0.1/name'][0].value}
     .row
       .col-xs-4
         strong
@@ -76,23 +76,23 @@ block content
       .col-xs-12
         h2 Lectures
 
-    each v in lectures.uris
+    each v in lectures
       hr.lecture
       .row
         .col-xs-9
-          h4= lectures[v]['dcterms:title']
+          h4= alltriples[v]['http://purl.org/dc/terms/title'][0].value
         .col-xs-3
-          h4.text-right= lectures[v]['syll:hasEventDate']
+          h4.text-right= alltriples[v]['http://lod.isi.edu/ontology/syllabus/hasEventDate'][0].value
       .row
         .col-xs-9
-          p= lectures[v]['dcterms:description']
+          p= alltriples[v]['http://purl.org/dc/terms/description'][0].value
         .col-xs-3
           ul.list-unstyled
-            if (typeof lectures[v]['syll:hasInstructor'] == 'string')
-              li.text-right= people[lectures[v]['syll:hasInstructor']]['foaf:lastName']
+            if (typeof alltriples[v]['http://lod.isi.edu/ontology/syllabus/hasInstructor'] == 'string')
+              li.text-right= alltriples[alltriples[v]['http://lod.isi.edu/ontology/syllabus/hasInstructor']]['http://xmlns.com/foaf/0.1/lastname'][0].value
             else
-              each instructor in lectures[v]['syll:hasInstructor']
-                li.text-right= people[instructor]['foaf:lastName']
+              each instructor in alltriples[v]['http://lod.isi.edu/ontology/syllabus/hasInstructor']
+                li.text-right= alltriples[instructor.value]['http://xmlns.com/foaf/0.1/lastName'][0].value
     hr.lecture
 
 
@@ -138,13 +138,12 @@ block content
       .col-xs-8
         strong
           | Topic
-    each uri in homeworks.uris
+    each uri in homeworks
       .row
         .col-xs-3
-          = homeworks[uri]['syll:hasEventDate']
+          = alltriples[uri]['http://lod.isi.edu/ontology/syllabus/hasEventDate'][0].value
         .col-xs-8
-          = homeworks[uri]['dcterms:title']
-
+          = alltriples[uri]['http://purl.org/dc/terms/title'][0].value
     // Quizzes /////////////////////////////////////////////
     //
     .row
@@ -177,12 +176,12 @@ block content
       .col-xs-8
         strong
           | Project Event
-    each uri in projects.uris
+    each uri in projectevents
       .row
         .col-xs-3
-          = projects[uri]['syll:hasEventDate']
+          = alltriples[uri]['http://lod.isi.edu/ontology/syllabus/hasEventDate'][0].value
         .col-xs-8
-          = projects[uri]['dcterms:title']
+          = alltriples[uri]['http://purl.org/dc/terms/title'][0].value
 
     .row
       .col-xs-12
