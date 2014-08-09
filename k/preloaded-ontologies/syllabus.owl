@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:syll="http://lod.isi.edu/ontology/syllabus/"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:vivo="http://vivoweb.org/ontology/core#"
+	xmlns:event="http://purl.org/NET/c4dm/event.owl#"
+	xmlns:bibo="http://purl.org/ontology/bibo/"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:skos="http://www.w3.org/2008/05/skos#">
+
+<rdf:Description rdf:about="http://lod.isi.edu/ontology/syllabus/Event">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
+	<rdfs:comment>Superclass for all events that happen in a class.</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://lod.isi.edu/ontology/syllabus/TeachingEvent">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://lod.isi.edu/ontology/syllabus/Event"/>
+	<rdfs:comment>Superclass for all events that happen in a class, that are related to teaching.</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://lod.isi.edu/ontology/syllabus/EvaluationEvent">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://lod.isi.edu/ontology/syllabus/Event"/>
+	<rdfs:comment>Superclass for all events that students do, such as homeworks and projects.</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://lod.isi.edu/ontology/syllabus/Lecture">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#Meeting"/>
+	<rdfs:subClassOf rdf:resource="http://lod.isi.edu/ontology/syllabus/TeachingEvent"/>
+	<rdfs:comment>One of the lectures in a course.</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://lod.isi.edu/ontology/syllabus/Homework">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://lod.isi.edu/ontology/syllabus/EvaluationEvent"/>
+	<rdfs:comment>A homework.</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://lod.isi.edu/ontology/syllabus/ProjectEvent">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://lod.isi.edu/ontology/syllabus/EvaluationEvent"/>
+	<rdfs:comment>An event related to a course project, such as software submission, class presentation, etc.</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://lod.isi.edu/ontology/syllabus/Course">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#Course"/>
+	<rdfs:subClassOf rdf:resource="http://lod.isi.edu/ontology/syllabus/TeachingEvent"/>
+	<rdfs:comment>Defines a course. We make no distinction between a course and the different instances when the course is taught.</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://lod.isi.edu/ontology/syllabus/Person">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<rdfs:comment>Our own Person class so we can subclass it from several ontologies.</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://lod.isi.edu/ontology/syllabus/hasLecture">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="http://lod.isi.edu/ontology/syllabus/Course"/>
+	<rdfs:range rdf:resource="http://lod.isi.edu/ontology/syllabus/Lecture"/>
+	<rdfs:comment>The lectures that comprise a course. A specific instantiation of the course may not schedule all the lectures.</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://lod.isi.edu/ontology/syllabus/hasInstructor">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="http://lod.isi.edu/ontology/syllabus/TeachingEvent"/>
+	<rdfs:range rdf:resource="http://lod.isi.edu/ontology/syllabus/Person"/>
+	<rdfs:comment>The person or persons how participate as instructors of a course.</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://lod.isi.edu/ontology/syllabus/hasTeachingAssistant">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="http://lod.isi.edu/ontology/syllabus/Course"/>
+	<rdfs:range rdf:resource="http://lod.isi.edu/ontology/syllabus/Person"/>
+	<rdfs:comment>A person serving as a teaching assistant for a course.</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://lod.isi.edu/ontology/syllabus/hasGrader">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="http://lod.isi.edu/ontology/syllabus/Course"/>
+	<rdfs:range rdf:resource="http://lod.isi.edu/ontology/syllabus/Person"/>
+	<rdfs:comment>A person serving as a grader for a course.</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://lod.isi.edu/ontology/syllabus/hasHomework">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="http://lod.isi.edu/ontology/syllabus/Course"/>
+	<rdfs:range rdf:resource="http://lod.isi.edu/ontology/syllabus/Homework"/>
+	<rdfs:comment>The homeworks assigned in a course.</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://lod.isi.edu/ontology/syllabus/hasProjectEvent">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="http://lod.isi.edu/ontology/syllabus/Course"/>
+	<rdfs:range rdf:resource="http://lod.isi.edu/ontology/syllabus/ProjectEvent"/>
+	<rdfs:comment>The events related to a course project.</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://lod.isi.edu/ontology/syllabus/hasEventDate">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
+	<rdfs:domain rdf:resource="http://lod.isi.edu/ontology/syllabus/Event"/>
+	<rdfs:comment>The date when the event occurs. If an event spans more than one day, it is the date when the event ends.</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://lod.isi.edu/ontology/syllabus/twitterId">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
+	<rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<rdfs:comment>The twitter handle of a person.</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://lod.isi.edu/ontology/syllabus/hasClassroom">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:domain rdf:resource="http://lod.isi.edu/ontology/syllabus/Course"/>
+	<rdfs:comment>The classroom where the class is held.</rdfs:comment>
+</rdf:Description>
+
+</rdf:RDF>

@@ -1,0 +1,270 @@
+@prefix vitro-public: <http://vitro.mannlib.cornell.edu/ns/vitro/public#> .
+@prefix c4o: <http://purl.org/spar/c4o/> .
+@prefix syll: <http://lod.isi.edu/ontology/syllabus/> .
+@prefix ero: <http://purl.obolibrary.org/obo/> .
+@prefix pvs: <http://vivoweb.org/ontology/provenance-support#> .
+@prefix owl2: <http://www.w3.org/2006/12/owl2-xml#> .
+@prefix scirr: <http://vivoweb.org/ontology/scientific-research-resource#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix afn: <http://jena.hpl.hp.com/ARQ/function#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix scires: <http://vivoweb.org/ontology/scientific-research#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix geo: <http://aims.fao.org/aos/geopolitical.owl#> .
+@prefix skco: <http://www.w3.org/2004/02/skos/core#> .
+@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
+@prefix wot: <http://xmlns.com/wot/0.1/> .
+@prefix dcelem: <http://purl.org/dc/elements/1.1/> .
+@prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix skos: <http://www.w3.org/2008/05/skos#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcam: <http://purl.org/dc/dcam/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix km-dev: <http://isi.edu/integration/karma/dev#> .
+
+_:node18upor35ux1 a km-dev:R2RMLMapping ;
+	km-dev:sourceName "people.json" ;
+	km-dev:modelPublicationTime "1407466704062"^^xsd:long ;
+	km-dev:modelVersion "1.7" ;
+	km-dev:hasInputColumns "[[{\"columnName\":\"name\"}],[{\"columnName\":\"depiction\"}],[{\"columnName\":\"email\"}],[{\"columnName\":\"homepage\"}],[{\"columnName\":\"twitter\"}],[{\"columnName\":\"title\"}]]" ;
+	km-dev:hasOutputColumns "[[{\"columnName\":\"name\"}],[{\"columnName\":\"depiction\"}],[{\"columnName\":\"email\"}],[{\"columnName\":\"email_uri\"}],[{\"columnName\":\"homepage\"}],[{\"columnName\":\"twitter\"}],[{\"columnName\":\"title\"}],[{\"columnName\":\"last_name\"}],[{\"columnName\":\"uri\"}]]" ;
+	km-dev:hasModelLabel "people.json" ;
+	km-dev:hasBaseURI "http://isi.edu/cs548/" ;
+	km-dev:hasWorksheetHistory "[{\"tags\":[\"Transformation\"],\"inputParameters\":[{\"name\":\"newColumnName\",\"value\":\"last_name\",\"type\":\"other\"},{\"name\":\"transformationCode\",\"value\":\"return getValue(\\\"name\\\").split()[-1]\",\"type\":\"other\"},{\"name\":\"worksheetId\",\"value\":\"W\",\"type\":\"worksheetId\"},{\"name\":\"hNodeId\",\"value\":[{\"columnName\":\"name\"}],\"type\":\"hNodeId\"},{\"name\":\"errorDefaultValue\",\"value\":\"\",\"type\":\"other\"},{\"name\":\"inputColumns\",\"value\":\"[{\\\"value\\\":[{\\\"columnName\\\":\\\"name\\\"}]}]\",\"type\":\"hNodeIdList\"},{\"name\":\"outputColumns\",\"value\":\"[{\\\"value\\\":[{\\\"columnName\\\":\\\"last_name\\\"}]}]\",\"type\":\"hNodeIdList\"}],\"commandName\":\"SubmitPythonTransformationCommand\"},{\"tags\":[\"Transformation\"],\"inputParameters\":[{\"name\":\"newColumnName\",\"value\":\"uri\",\"type\":\"other\"},{\"name\":\"transformationCode\",\"value\":\"return \\\"person/\\\"+getValue(\\\"last_name\\\")\",\"type\":\"other\"},{\"name\":\"worksheetId\",\"value\":\"W\",\"type\":\"worksheetId\"},{\"name\":\"hNodeId\",\"value\":[{\"columnName\":\"last_name\"}],\"type\":\"hNodeId\"},{\"name\":\"errorDefaultValue\",\"value\":\"\",\"type\":\"other\"},{\"name\":\"inputColumns\",\"value\":\"[{\\\"value\\\":[{\\\"columnName\\\":\\\"last_name\\\"}]}]\",\"type\":\"hNodeIdList\"},{\"name\":\"outputColumns\",\"value\":\"[{\\\"value\\\":[{\\\"columnName\\\":\\\"uri\\\"}]}]\",\"type\":\"hNodeIdList\"}],\"commandName\":\"SubmitPythonTransformationCommand\"},{\"tags\":[\"Modeling\"],\"inputParameters\":[{\"name\":\"metaPropertyName\",\"type\":\"other\"},{\"name\":\"hNodeId\",\"value\":[{\"columnName\":\"name\"}],\"type\":\"hNodeId\"},{\"name\":\"SemanticTypesArray\",\"value\":[{\"isPrimary\":true,\"FullType\":\"http://xmlns.com/foaf/0.1/name\",\"Domain\":\"http://lod.isi.edu/ontology/syllabus/Person\"}],\"type\":\"other\"},{\"name\":\"worksheetId\",\"value\":\"W\",\"type\":\"worksheetId\"},{\"name\":\"isKey\",\"value\":false,\"type\":\"other\"},{\"name\":\"trainAndShowUpdates\",\"value\":false,\"type\":\"other\"},{\"name\":\"rdfLiteralType\",\"value\":\"\",\"type\":\"other\"},{\"name\":\"inputColumns\",\"value\":\"[{\\\"value\\\":[{\\\"columnName\\\":\\\"name\\\"}]}]\",\"type\":\"hNodeIdList\"},{\"name\":\"outputColumns\",\"value\":\"[{\\\"value\\\":[{\\\"columnName\\\":\\\"name\\\"}]}]\",\"type\":\"hNodeIdList\"}],\"commandName\":\"SetSemanticTypeCommand\"},{\"tags\":[\"Modeling\"],\"inputParameters\":[{\"name\":\"metaPropertyName\",\"type\":\"other\"},{\"name\":\"hNodeId\",\"value\":[{\"columnName\":\"last_name\"}],\"type\":\"hNodeId\"},{\"name\":\"SemanticTypesArray\",\"value\":[{\"isPrimary\":true,\"FullType\":\"http://xmlns.com/foaf/0.1/lastName\",\"Domain\":\"http://lod.isi.edu/ontology/syllabus/Person1\"}],\"type\":\"other\"},{\"name\":\"worksheetId\",\"value\":\"W\",\"type\":\"worksheetId\"},{\"name\":\"isKey\",\"value\":false,\"type\":\"other\"},{\"name\":\"trainAndShowUpdates\",\"value\":false,\"type\":\"other\"},{\"name\":\"rdfLiteralType\",\"value\":\"\",\"type\":\"other\"},{\"name\":\"inputColumns\",\"value\":\"[{\\\"value\\\":[{\\\"columnName\\\":\\\"last_name\\\"}]}]\",\"type\":\"hNodeIdList\"},{\"name\":\"outputColumns\",\"value\":\"[{\\\"value\\\":[{\\\"columnName\\\":\\\"last_name\\\"}]}]\",\"type\":\"hNodeIdList\"}],\"commandName\":\"SetSemanticTypeCommand\"},{\"tags\":[\"Modeling\"],\"inputParameters\":[{\"name\":\"metaPropertyName\",\"value\":\"isUriOfClass\",\"type\":\"other\"},{\"name\":\"metaPropertyValue\",\"value\":\"http://lod.isi.edu/ontology/syllabus/Person1\",\"type\":\"other\"},{\"name\":\"hNodeId\",\"value\":[{\"columnName\":\"uri\"}],\"type\":\"hNodeId\"},{\"name\":\"SemanticTypesArray\",\"type\":\"other\"},{\"name\":\"worksheetId\",\"value\":\"W\",\"type\":\"worksheetId\"},{\"name\":\"isKey\",\"value\":false,\"type\":\"other\"},{\"name\":\"trainAndShowUpdates\",\"value\":false,\"type\":\"other\"},{\"name\":\"rdfLiteralType\",\"value\":\"\",\"type\":\"other\"},{\"name\":\"inputColumns\",\"value\":\"[{\\\"value\\\":[{\\\"columnName\\\":\\\"uri\\\"}]}]\",\"type\":\"hNodeIdList\"},{\"name\":\"outputColumns\",\"value\":\"[{\\\"value\\\":[{\\\"columnName\\\":\\\"uri\\\"}]}]\",\"type\":\"hNodeIdList\"}],\"commandName\":\"SetMetaPropertyCommand\"},{\"tags\":[\"Modeling\"],\"inputParameters\":[{\"name\":\"metaPropertyName\",\"type\":\"other\"},{\"name\":\"hNodeId\",\"value\":[{\"columnName\":\"title\"}],\"type\":\"hNodeId\"},{\"name\":\"SemanticTypesArray\",\"value\":[{\"isPrimary\":true,\"FullType\":\"http://xmlns.com/foaf/0.1/title\",\"Domain\":\"http://lod.isi.edu/ontology/syllabus/Person1\"}],\"type\":\"other\"},{\"name\":\"worksheetId\",\"value\":\"W\",\"type\":\"worksheetId\"},{\"name\":\"isKey\",\"value\":false,\"type\":\"other\"},{\"name\":\"trainAndShowUpdates\",\"value\":false,\"type\":\"other\"},{\"name\":\"rdfLiteralType\",\"value\":\"\",\"type\":\"other\"},{\"name\":\"inputColumns\",\"value\":\"[{\\\"value\\\":[{\\\"columnName\\\":\\\"title\\\"}]}]\",\"type\":\"hNodeIdList\"},{\"name\":\"outputColumns\",\"value\":\"[{\\\"value\\\":[{\\\"columnName\\\":\\\"title\\\"}]}]\",\"type\":\"hNodeIdList\"}],\"commandName\":\"SetSemanticTypeCommand\"},{\"tags\":[\"Modeling\"],\"inputParameters\":[{\"name\":\"metaPropertyName\",\"value\":\"isUriOfClass\",\"type\":\"other\"},{\"name\":\"metaPropertyValue\",\"value\":\"http://xmlns.com/foaf/0.1/Document1\",\"type\":\"other\"},{\"name\":\"hNodeId\",\"value\":[{\"columnName\":\"homepage\"}],\"type\":\"hNodeId\"},{\"name\":\"SemanticTypesArray\",\"type\":\"other\"},{\"name\":\"worksheetId\",\"value\":\"W\",\"type\":\"worksheetId\"},{\"name\":\"isKey\",\"value\":false,\"type\":\"other\"},{\"name\":\"trainAndShowUpdates\",\"value\":false,\"type\":\"other\"},{\"name\":\"rdfLiteralType\",\"value\":\"\",\"type\":\"other\"},{\"name\":\"inputColumns\",\"value\":\"[{\\\"value\\\":[{\\\"columnName\\\":\\\"homepage\\\"}]}]\",\"type\":\"hNodeIdList\"},{\"name\":\"outputColumns\",\"value\":\"[{\\\"value\\\":[{\\\"columnName\\\":\\\"homepage\\\"}]}]\",\"type\":\"hNodeIdList\"}],\"commandName\":\"SetMetaPropertyCommand\"},{\"tags\":[\"Modeling\"],\"inputParameters\":[{\"name\":\"alignmentId\",\"value\":\"WSP5:WS1AL\",\"type\":\"other\"},{\"name\":\"worksheetId\",\"value\":\"W\",\"type\":\"worksheetId\"},{\"name\":\"newEdges\",\"value\":[{\"edgeId\":\"http://xmlns.com/foaf/0.1/homepage\",\"edgeTargetId\":\"http://xmlns.com/foaf/0.1/Document1\",\"edgeSourceId\":\"http://lod.isi.edu/ontology/syllabus/Person1\"}],\"type\":\"other\"},{\"name\":\"initialEdges\",\"value\":[{\"edgeId\":\"http://xmlns.com/foaf/0.1/tipjar\",\"edgeTargetId\":\"http://xmlns.com/foaf/0.1/Document1\",\"edgeSourceId\":\"http://lod.isi.edu/ontology/syllabus/Person1\"}],\"type\":\"other\"},{\"name\":\"inputColumns\",\"value\":\"[]\",\"type\":\"hNodeIdList\"},{\"name\":\"outputColumns\",\"value\":\"[]\",\"type\":\"hNodeIdList\"}],\"commandName\":\"ChangeInternalNodeLinksCommand\"},{\"tags\":[\"Modeling\"],\"inputParameters\":[{\"name\":\"metaPropertyName\",\"value\":\"isUriOfClass\",\"type\":\"other\"},{\"name\":\"metaPropertyValue\",\"value\":\"http://www.w3.org/2002/07/owl#Thing1\",\"type\":\"other\"},{\"name\":\"hNodeId\",\"value\":[{\"columnName\":\"email\"}],\"type\":\"hNodeId\"},{\"name\":\"SemanticTypesArray\",\"type\":\"other\"},{\"name\":\"worksheetId\",\"value\":\"W\",\"type\":\"worksheetId\"},{\"name\":\"isKey\",\"value\":false,\"type\":\"other\"},{\"name\":\"trainAndShowUpdates\",\"value\":false,\"type\":\"other\"},{\"name\":\"rdfLiteralType\",\"value\":\"\",\"type\":\"other\"},{\"name\":\"inputColumns\",\"value\":\"[{\\\"value\\\":[{\\\"columnName\\\":\\\"email\\\"}]}]\",\"type\":\"hNodeIdList\"},{\"name\":\"outputColumns\",\"value\":\"[{\\\"value\\\":[{\\\"columnName\\\":\\\"email\\\"}]}]\",\"type\":\"hNodeIdList\"}],\"commandName\":\"SetMetaPropertyCommand\"},{\"tags\":[\"Modeling\"],\"inputParameters\":[{\"name\":\"initialEdges\",\"value\":[{\"edgeId\":\"http://xmlns.com/foaf/0.1/maker\",\"edgeLabel\":\"foaf:maker\",\"edgeSource\":\"owl:Thing1\",\"direction\":\"outgoing\",\"edgeTarget\":\"syll:Person1\",\"edgeTargetId\":\"http://lod.isi.edu/ontology/syllabus/Person1\",\"edgeSourceId\":\"http://www.w3.org/2002/07/owl#Thing1\"}],\"type\":\"other\"},{\"name\":\"alignmentId\",\"value\":\"WSP5:WS1AL\",\"type\":\"other\"},{\"name\":\"worksheetId\",\"value\":\"W\",\"type\":\"worksheetId\"},{\"name\":\"newEdges\",\"value\":[{\"edgeId\":\"http://xmlns.com/foaf/0.1/mbox\",\"edgeTargetId\":\"http://www.w3.org/2002/07/owl#Thing1\",\"edgeSourceId\":\"http://lod.isi.edu/ontology/syllabus/Person1\"}],\"type\":\"other\"},{\"name\":\"inputColumns\",\"value\":\"[]\",\"type\":\"hNodeIdList\"},{\"name\":\"outputColumns\",\"value\":\"[]\",\"type\":\"hNodeIdList\"}],\"commandName\":\"ChangeInternalNodeLinksCommand\"},{\"tags\":[\"Modeling\"],\"inputParameters\":[{\"name\":\"metaPropertyName\",\"value\":\"isUriOfClass\",\"type\":\"other\"},{\"name\":\"metaPropertyValue\",\"value\":\"http://xmlns.com/foaf/0.1/Image1\",\"type\":\"other\"},{\"name\":\"hNodeId\",\"value\":[{\"columnName\":\"depiction\"}],\"type\":\"hNodeId\"},{\"name\":\"SemanticTypesArray\",\"type\":\"other\"},{\"name\":\"worksheetId\",\"value\":\"W\",\"type\":\"worksheetId\"},{\"name\":\"isKey\",\"value\":false,\"type\":\"other\"},{\"name\":\"trainAndShowUpdates\",\"value\":false,\"type\":\"other\"},{\"name\":\"rdfLiteralType\",\"value\":\"\",\"type\":\"other\"},{\"name\":\"inputColumns\",\"value\":\"[{\\\"value\\\":[{\\\"columnName\\\":\\\"depiction\\\"}]}]\",\"type\":\"hNodeIdList\"},{\"name\":\"outputColumns\",\"value\":\"[{\\\"value\\\":[{\\\"columnName\\\":\\\"depiction\\\"}]}]\",\"type\":\"hNodeIdList\"}],\"commandName\":\"SetMetaPropertyCommand\"},{\"tags\":[\"Modeling\"],\"inputParameters\":[{\"name\":\"alignmentId\",\"value\":\"WSP5:WS1AL\",\"type\":\"other\"},{\"name\":\"worksheetId\",\"value\":\"W\",\"type\":\"worksheetId\"},{\"name\":\"newEdges\",\"value\":[{\"edgeId\":\"http://xmlns.com/foaf/0.1/depiction\",\"edgeTargetId\":\"http://xmlns.com/foaf/0.1/Image1\",\"edgeSourceId\":\"http://lod.isi.edu/ontology/syllabus/Person1\"}],\"type\":\"other\"},{\"name\":\"initialEdges\",\"value\":[{\"edgeId\":\"http://xmlns.com/foaf/0.1/tipjar\",\"edgeTargetId\":\"http://xmlns.com/foaf/0.1/Image1\",\"edgeSourceId\":\"http://lod.isi.edu/ontology/syllabus/Person1\"}],\"type\":\"other\"},{\"name\":\"inputColumns\",\"value\":\"[]\",\"type\":\"hNodeIdList\"},{\"name\":\"outputColumns\",\"value\":\"[]\",\"type\":\"hNodeIdList\"}],\"commandName\":\"ChangeInternalNodeLinksCommand\"},{\"tags\":[\"Modeling\"],\"inputParameters\":[{\"name\":\"worksheetId\",\"value\":\"W\",\"type\":\"worksheetId\"},{\"name\":\"properties\",\"value\":{\"hasServiceProperties\":false,\"graphName\":\"http://lod.isi.edu/cs548/model/people\"},\"type\":\"other\"},{\"name\":\"inputColumns\",\"value\":\"[]\",\"type\":\"hNodeIdList\"},{\"name\":\"outputColumns\",\"value\":\"[]\",\"type\":\"hNodeIdList\"}],\"commandName\":\"SetWorksheetPropertiesCommand\"},{\"tags\":[\"Modeling\"],\"inputParameters\":[{\"name\":\"metaPropertyName\",\"type\":\"other\"},{\"name\":\"hNodeId\",\"value\":[{\"columnName\":\"twitter\"}],\"type\":\"hNodeId\"},{\"name\":\"SemanticTypesArray\",\"value\":[{\"isPrimary\":true,\"FullType\":\"http://lod.isi.edu/ontology/syllabus/twitterId\",\"Domain\":\"http://lod.isi.edu/ontology/syllabus/Person1\"}],\"type\":\"other\"},{\"name\":\"worksheetId\",\"value\":\"W\",\"type\":\"worksheetId\"},{\"name\":\"isKey\",\"value\":false,\"type\":\"other\"},{\"name\":\"trainAndShowUpdates\",\"value\":false,\"type\":\"other\"},{\"name\":\"rdfLiteralType\",\"value\":\"\",\"type\":\"other\"},{\"name\":\"inputColumns\",\"value\":\"[{\\\"value\\\":[{\\\"columnName\\\":\\\"twitter\\\"}]}]\",\"type\":\"hNodeIdList\"},{\"name\":\"outputColumns\",\"value\":\"[{\\\"value\\\":[{\\\"columnName\\\":\\\"twitter\\\"}]}]\",\"type\":\"hNodeIdList\"}],\"commandName\":\"SetSemanticTypeCommand\"},{\"tags\":[\"Transformation\"],\"inputParameters\":[{\"name\":\"newColumnName\",\"value\":\"email_uri\",\"type\":\"other\"},{\"name\":\"transformationCode\",\"value\":\"return \\\"mailto:\\\"+getValue(\\\"email\\\")\",\"type\":\"other\"},{\"name\":\"worksheetId\",\"value\":\"W\",\"type\":\"worksheetId\"},{\"name\":\"hNodeId\",\"value\":[{\"columnName\":\"email\"}],\"type\":\"hNodeId\"},{\"name\":\"errorDefaultValue\",\"value\":\"\",\"type\":\"other\"},{\"name\":\"inputColumns\",\"value\":\"[{\\\"value\\\":[{\\\"columnName\\\":\\\"email\\\"}]}]\",\"type\":\"hNodeIdList\"},{\"name\":\"outputColumns\",\"value\":\"[{\\\"value\\\":[{\\\"columnName\\\":\\\"email_uri\\\"}]}]\",\"type\":\"hNodeIdList\"}],\"commandName\":\"SubmitPythonTransformationCommand\"},{\"tags\":[\"Modeling\"],\"inputParameters\":[{\"name\":\"metaPropertyName\",\"value\":\"isUriOfClass\",\"type\":\"other\"},{\"name\":\"metaPropertyValue\",\"value\":\"http://www.w3.org/2002/07/owl#Thing\",\"type\":\"other\"},{\"name\":\"hNodeId\",\"value\":[{\"columnName\":\"email_uri\"}],\"type\":\"hNodeId\"},{\"name\":\"SemanticTypesArray\",\"type\":\"other\"},{\"name\":\"worksheetId\",\"value\":\"W\",\"type\":\"worksheetId\"},{\"name\":\"isKey\",\"value\":false,\"type\":\"other\"},{\"name\":\"trainAndShowUpdates\",\"value\":false,\"type\":\"other\"},{\"name\":\"rdfLiteralType\",\"value\":\"\",\"type\":\"other\"},{\"name\":\"inputColumns\",\"value\":\"[{\\\"value\\\":[{\\\"columnName\\\":\\\"email_uri\\\"}]}]\",\"type\":\"hNodeIdList\"},{\"name\":\"outputColumns\",\"value\":\"[{\\\"value\\\":[{\\\"columnName\\\":\\\"email_uri\\\"}]}]\",\"type\":\"hNodeIdList\"}],\"commandName\":\"SetMetaPropertyCommand\"},{\"tags\":[\"Modeling\"],\"inputParameters\":[{\"name\":\"initialEdges\",\"value\":[{\"edgeId\":\"http://xmlns.com/foaf/0.1/maker\",\"edgeLabel\":\"foaf:maker\",\"edgeSource\":\"owl:Thing2\",\"direction\":\"outgoing\",\"edgeTarget\":\"syll:Person1\",\"edgeTargetId\":\"http://lod.isi.edu/ontology/syllabus/Person1\",\"edgeSourceId\":\"http://www.w3.org/2002/07/owl#Thing2\"}],\"type\":\"other\"},{\"name\":\"alignmentId\",\"value\":\"WSP5:WS1AL\",\"type\":\"other\"},{\"name\":\"worksheetId\",\"value\":\"W\",\"type\":\"worksheetId\"},{\"name\":\"newEdges\",\"value\":[{\"edgeId\":\"http://xmlns.com/foaf/0.1/mbox\",\"edgeTargetId\":\"http://www.w3.org/2002/07/owl#Thing2\",\"edgeSourceId\":\"http://lod.isi.edu/ontology/syllabus/Person1\"}],\"type\":\"other\"},{\"name\":\"inputColumns\",\"value\":\"[]\",\"type\":\"hNodeIdList\"},{\"name\":\"outputColumns\",\"value\":\"[]\",\"type\":\"hNodeIdList\"}],\"commandName\":\"ChangeInternalNodeLinksCommand\"},{\"tags\":[\"Modeling\"],\"inputParameters\":[{\"name\":\"metaPropertyName\",\"type\":\"other\"},{\"name\":\"hNodeId\",\"value\":[{\"columnName\":\"email\"}],\"type\":\"hNodeId\"},{\"name\":\"SemanticTypesArray\",\"value\":[],\"type\":\"other\"},{\"name\":\"worksheetId\",\"value\":\"W\",\"type\":\"worksheetId\"},{\"name\":\"isKey\",\"value\":false,\"type\":\"other\"},{\"name\":\"trainAndShowUpdates\",\"value\":true,\"type\":\"other\"},{\"name\":\"rdfLiteralType\",\"value\":\"\",\"type\":\"other\"},{\"name\":\"inputColumns\",\"value\":\"[{\\\"value\\\":[{\\\"columnName\\\":\\\"email\\\"}]}]\",\"type\":\"hNodeIdList\"},{\"name\":\"outputColumns\",\"value\":\"[{\\\"value\\\":[{\\\"columnName\\\":\\\"email\\\"}]}]\",\"type\":\"hNodeIdList\"}],\"commandName\":\"UnassignSemanticTypeCommand\"},{\"tags\":[\"Modeling\"],\"inputParameters\":[{\"name\":\"initialEdges\",\"value\":[{\"edgeId\":\"http://xmlns.com/foaf/0.1/mbox\",\"edgeLabel\":\"foaf:mbox\",\"edgeSource\":\"syll:Person1\",\"direction\":\"incoming\",\"edgeTarget\":\"owl:Thing1\",\"edgeTargetId\":\"http://www.w3.org/2002/07/owl#Thing1\",\"edgeSourceId\":\"http://lod.isi.edu/ontology/syllabus/Person1\"}],\"type\":\"other\"},{\"name\":\"alignmentId\",\"value\":\"WSP6:WS1AL\",\"type\":\"other\"},{\"name\":\"worksheetId\",\"value\":\"W\",\"type\":\"worksheetId\"},{\"name\":\"newEdges\",\"value\":[],\"type\":\"other\"},{\"name\":\"inputColumns\",\"value\":\"[]\",\"type\":\"hNodeIdList\"},{\"name\":\"outputColumns\",\"value\":\"[]\",\"type\":\"hNodeIdList\"}],\"commandName\":\"ChangeInternalNodeLinksCommand\"},{\"tags\":[\"Modeling\"],\"inputParameters\":[{\"name\":\"metaPropertyName\",\"type\":\"other\"},{\"name\":\"hNodeId\",\"value\":[{\"columnName\":\"email\"}],\"type\":\"hNodeId\"},{\"name\":\"SemanticTypesArray\",\"value\":[{\"isPrimary\":true,\"FullType\":\"http://www.w3.org/2000/01/rdf-schema#label\",\"Domain\":\"http://www.w3.org/2002/07/owl#Thing2\"}],\"type\":\"other\"},{\"name\":\"worksheetId\",\"value\":\"W\",\"type\":\"worksheetId\"},{\"name\":\"isKey\",\"value\":false,\"type\":\"other\"},{\"name\":\"trainAndShowUpdates\",\"value\":false,\"type\":\"other\"},{\"name\":\"rdfLiteralType\",\"value\":\"\",\"type\":\"other\"},{\"name\":\"inputColumns\",\"value\":\"[{\\\"value\\\":[{\\\"columnName\\\":\\\"email\\\"}]}]\",\"type\":\"hNodeIdList\"},{\"name\":\"outputColumns\",\"value\":\"[{\\\"value\\\":[{\\\"columnName\\\":\\\"email\\\"}]}]\",\"type\":\"hNodeIdList\"}],\"commandName\":\"SetSemanticTypeCommand\"},{\"tags\":[\"Modeling\"],\"inputParameters\":[{\"name\":\"worksheetId\",\"value\":\"W\",\"type\":\"worksheetId\"},{\"name\":\"properties\",\"value\":{\"hasServiceProperties\":false,\"hasPrefix\":false,\"graphLabel\":\"\",\"hasBaseURI\":true,\"baseURI\":\"http://isi.edu/cs548/\"},\"type\":\"other\"},{\"name\":\"inputColumns\",\"value\":\"[]\",\"type\":\"hNodeIdList\"},{\"name\":\"outputColumns\",\"value\":\"[]\",\"type\":\"hNodeIdList\"}],\"commandName\":\"SetWorksheetPropertiesCommand\"}]" .
+
+km-dev:TriplesMap_c670e079-6725-4043-b5af-e42eabfc7f68 a rr:TriplesMap .
+
+_:node18upor35ux1 km-dev:hasTriplesMap km-dev:TriplesMap_c670e079-6725-4043-b5af-e42eabfc7f68 .
+
+km-dev:TriplesMap_c670e079-6725-4043-b5af-e42eabfc7f68 km-dev:isPartOfMapping _:node18upor35ux1 .
+
+_:node18upor35ux2 rr:tableName "people.json" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node18upor35ux1 .
+
+_:node18upor35ux1 km-dev:hasLogicalTable _:node18upor35ux2 .
+
+km-dev:TriplesMap_c670e079-6725-4043-b5af-e42eabfc7f68 rr:logicalTable _:node18upor35ux2 ;
+	rr:subjectMap _:node18upor35ux3 .
+
+_:node18upor35ux1 km-dev:hasSubjectMap _:node18upor35ux3 .
+
+_:node18upor35ux3 km-dev:isPartOfMapping _:node18upor35ux1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://lod.isi.edu/ontology/syllabus/Person1" ;
+	rr:class syll:Person ;
+	rr:template "person/{last_name}" ;
+	a km-dev:steinerTreeRootNode .
+
+km-dev:PredicateObjectMap_18c3c2fb-14be-4e6a-ac5f-b0e3c3636ab5 rr:predicate syll:twitterId .
+
+_:node18upor35ux4 rr:column "twitter" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node18upor35ux1 .
+
+_:node18upor35ux1 km-dev:hasObjectMap _:node18upor35ux4 .
+
+km-dev:PredicateObjectMap_18c3c2fb-14be-4e6a-ac5f-b0e3c3636ab5 rr:objectMap _:node18upor35ux4 .
+
+km-dev:TriplesMap_c670e079-6725-4043-b5af-e42eabfc7f68 rr:predicateObjectMap km-dev:PredicateObjectMap_18c3c2fb-14be-4e6a-ac5f-b0e3c3636ab5 .
+
+km-dev:PredicateObjectMap_18c3c2fb-14be-4e6a-ac5f-b0e3c3636ab5 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node18upor35ux1 .
+
+_:node18upor35ux1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_18c3c2fb-14be-4e6a-ac5f-b0e3c3636ab5 .
+
+km-dev:PredicateObjectMap_9d069d5c-216e-48fe-9061-5d5e02fdd893 rr:predicate foaf:depiction .
+
+km-dev:RefObjectMap_878c29db-01b0-4024-99e5-e73bf0209118 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_f2dc45de-fa08-4d64-8f7f-4f7f7a96862a ;
+	km-dev:isPartOfMapping _:node18upor35ux1 .
+
+_:node18upor35ux1 km-dev:hasObjectMap km-dev:RefObjectMap_878c29db-01b0-4024-99e5-e73bf0209118 .
+
+km-dev:PredicateObjectMap_9d069d5c-216e-48fe-9061-5d5e02fdd893 rr:objectMap km-dev:RefObjectMap_878c29db-01b0-4024-99e5-e73bf0209118 .
+
+km-dev:TriplesMap_c670e079-6725-4043-b5af-e42eabfc7f68 rr:predicateObjectMap km-dev:PredicateObjectMap_9d069d5c-216e-48fe-9061-5d5e02fdd893 .
+
+km-dev:PredicateObjectMap_9d069d5c-216e-48fe-9061-5d5e02fdd893 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node18upor35ux1 .
+
+_:node18upor35ux1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_9d069d5c-216e-48fe-9061-5d5e02fdd893 .
+
+km-dev:PredicateObjectMap_9bbf516b-ffbe-479c-9fcf-eb4f1536669b rr:predicate foaf:homepage .
+
+km-dev:RefObjectMap_a3f888e9-6485-4eea-81f7-2a8ff55d9f89 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_d4238fcb-d34a-4d0f-88e5-f5117c696e93 ;
+	km-dev:isPartOfMapping _:node18upor35ux1 .
+
+_:node18upor35ux1 km-dev:hasObjectMap km-dev:RefObjectMap_a3f888e9-6485-4eea-81f7-2a8ff55d9f89 .
+
+km-dev:PredicateObjectMap_9bbf516b-ffbe-479c-9fcf-eb4f1536669b rr:objectMap km-dev:RefObjectMap_a3f888e9-6485-4eea-81f7-2a8ff55d9f89 .
+
+km-dev:TriplesMap_c670e079-6725-4043-b5af-e42eabfc7f68 rr:predicateObjectMap km-dev:PredicateObjectMap_9bbf516b-ffbe-479c-9fcf-eb4f1536669b .
+
+km-dev:PredicateObjectMap_9bbf516b-ffbe-479c-9fcf-eb4f1536669b a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node18upor35ux1 .
+
+_:node18upor35ux1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_9bbf516b-ffbe-479c-9fcf-eb4f1536669b .
+
+km-dev:PredicateObjectMap_a51eb619-ea56-4d5e-917a-1128bc0dc389 rr:predicate foaf:lastName .
+
+_:node18upor35ux5 rr:column "last_name" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node18upor35ux1 .
+
+_:node18upor35ux1 km-dev:hasObjectMap _:node18upor35ux5 .
+
+km-dev:PredicateObjectMap_a51eb619-ea56-4d5e-917a-1128bc0dc389 rr:objectMap _:node18upor35ux5 .
+
+km-dev:TriplesMap_c670e079-6725-4043-b5af-e42eabfc7f68 rr:predicateObjectMap km-dev:PredicateObjectMap_a51eb619-ea56-4d5e-917a-1128bc0dc389 .
+
+km-dev:PredicateObjectMap_a51eb619-ea56-4d5e-917a-1128bc0dc389 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node18upor35ux1 .
+
+_:node18upor35ux1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_a51eb619-ea56-4d5e-917a-1128bc0dc389 .
+
+km-dev:PredicateObjectMap_1a9cc508-558e-4848-abc7-ac154bb97670 rr:predicate foaf:mbox .
+
+km-dev:RefObjectMap_7e8d04b2-1199-4621-9779-7f7a53059f22 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_faa557f8-9d2b-4405-9405-e670ae990c10 ;
+	km-dev:isPartOfMapping _:node18upor35ux1 .
+
+_:node18upor35ux1 km-dev:hasObjectMap km-dev:RefObjectMap_7e8d04b2-1199-4621-9779-7f7a53059f22 .
+
+km-dev:PredicateObjectMap_1a9cc508-558e-4848-abc7-ac154bb97670 rr:objectMap km-dev:RefObjectMap_7e8d04b2-1199-4621-9779-7f7a53059f22 .
+
+km-dev:TriplesMap_c670e079-6725-4043-b5af-e42eabfc7f68 rr:predicateObjectMap km-dev:PredicateObjectMap_1a9cc508-558e-4848-abc7-ac154bb97670 .
+
+km-dev:PredicateObjectMap_1a9cc508-558e-4848-abc7-ac154bb97670 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node18upor35ux1 .
+
+_:node18upor35ux1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_1a9cc508-558e-4848-abc7-ac154bb97670 .
+
+km-dev:PredicateObjectMap_1e3a88d9-398f-4b33-9c81-ce01e1dd6390 rr:predicate foaf:name .
+
+_:node18upor35ux6 rr:column "name" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node18upor35ux1 .
+
+_:node18upor35ux1 km-dev:hasObjectMap _:node18upor35ux6 .
+
+km-dev:PredicateObjectMap_1e3a88d9-398f-4b33-9c81-ce01e1dd6390 rr:objectMap _:node18upor35ux6 .
+
+km-dev:TriplesMap_c670e079-6725-4043-b5af-e42eabfc7f68 rr:predicateObjectMap km-dev:PredicateObjectMap_1e3a88d9-398f-4b33-9c81-ce01e1dd6390 .
+
+km-dev:PredicateObjectMap_1e3a88d9-398f-4b33-9c81-ce01e1dd6390 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node18upor35ux1 .
+
+_:node18upor35ux1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_1e3a88d9-398f-4b33-9c81-ce01e1dd6390 .
+
+km-dev:PredicateObjectMap_416ea755-d3b9-4d67-b352-5371c7bead83 rr:predicate foaf:title .
+
+_:node18upor35ux7 rr:column "title" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node18upor35ux1 .
+
+_:node18upor35ux1 km-dev:hasObjectMap _:node18upor35ux7 .
+
+km-dev:PredicateObjectMap_416ea755-d3b9-4d67-b352-5371c7bead83 rr:objectMap _:node18upor35ux7 .
+
+km-dev:TriplesMap_c670e079-6725-4043-b5af-e42eabfc7f68 rr:predicateObjectMap km-dev:PredicateObjectMap_416ea755-d3b9-4d67-b352-5371c7bead83 .
+
+km-dev:PredicateObjectMap_416ea755-d3b9-4d67-b352-5371c7bead83 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node18upor35ux1 .
+
+_:node18upor35ux1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_416ea755-d3b9-4d67-b352-5371c7bead83 .
+
+km-dev:TriplesMap_f2dc45de-fa08-4d64-8f7f-4f7f7a96862a a rr:TriplesMap .
+
+_:node18upor35ux1 km-dev:hasTriplesMap km-dev:TriplesMap_f2dc45de-fa08-4d64-8f7f-4f7f7a96862a .
+
+km-dev:TriplesMap_f2dc45de-fa08-4d64-8f7f-4f7f7a96862a km-dev:isPartOfMapping _:node18upor35ux1 .
+
+_:node18upor35ux8 rr:tableName "people.json" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node18upor35ux1 .
+
+_:node18upor35ux1 km-dev:hasLogicalTable _:node18upor35ux8 .
+
+km-dev:TriplesMap_f2dc45de-fa08-4d64-8f7f-4f7f7a96862a rr:logicalTable _:node18upor35ux8 ;
+	rr:subjectMap _:node18upor35ux9 .
+
+_:node18upor35ux1 km-dev:hasSubjectMap _:node18upor35ux9 .
+
+_:node18upor35ux9 km-dev:isPartOfMapping _:node18upor35ux1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://xmlns.com/foaf/0.1/Image1" ;
+	rr:class foaf:Image ;
+	rr:template "{depiction}" .
+
+km-dev:TriplesMap_d4238fcb-d34a-4d0f-88e5-f5117c696e93 a rr:TriplesMap .
+
+_:node18upor35ux1 km-dev:hasTriplesMap km-dev:TriplesMap_d4238fcb-d34a-4d0f-88e5-f5117c696e93 .
+
+km-dev:TriplesMap_d4238fcb-d34a-4d0f-88e5-f5117c696e93 km-dev:isPartOfMapping _:node18upor35ux1 .
+
+_:node18upor35ux10 rr:tableName "people.json" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node18upor35ux1 .
+
+_:node18upor35ux1 km-dev:hasLogicalTable _:node18upor35ux10 .
+
+km-dev:TriplesMap_d4238fcb-d34a-4d0f-88e5-f5117c696e93 rr:logicalTable _:node18upor35ux10 ;
+	rr:subjectMap _:node18upor35ux11 .
+
+_:node18upor35ux1 km-dev:hasSubjectMap _:node18upor35ux11 .
+
+_:node18upor35ux11 km-dev:isPartOfMapping _:node18upor35ux1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://xmlns.com/foaf/0.1/Document1" ;
+	rr:class foaf:Document ;
+	rr:template "{homepage}" .
+
+km-dev:TriplesMap_faa557f8-9d2b-4405-9405-e670ae990c10 a rr:TriplesMap .
+
+_:node18upor35ux1 km-dev:hasTriplesMap km-dev:TriplesMap_faa557f8-9d2b-4405-9405-e670ae990c10 .
+
+km-dev:TriplesMap_faa557f8-9d2b-4405-9405-e670ae990c10 km-dev:isPartOfMapping _:node18upor35ux1 .
+
+_:node18upor35ux12 rr:tableName "people.json" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node18upor35ux1 .
+
+_:node18upor35ux1 km-dev:hasLogicalTable _:node18upor35ux12 .
+
+km-dev:TriplesMap_faa557f8-9d2b-4405-9405-e670ae990c10 rr:logicalTable _:node18upor35ux12 ;
+	rr:subjectMap _:node18upor35ux13 .
+
+_:node18upor35ux1 km-dev:hasSubjectMap _:node18upor35ux13 .
+
+_:node18upor35ux13 km-dev:isPartOfMapping _:node18upor35ux1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.w3.org/2002/07/owl#Thing2" ;
+	rr:class owl:Thing ;
+	rr:template "mailto:{email}" .
+
+km-dev:PredicateObjectMap_7ed09e7c-9039-4c4b-9886-92e577d4eb5f rr:predicate rdfs:label .
+
+_:node18upor35ux14 rr:column "email" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node18upor35ux1 .
+
+_:node18upor35ux1 km-dev:hasObjectMap _:node18upor35ux14 .
+
+km-dev:PredicateObjectMap_7ed09e7c-9039-4c4b-9886-92e577d4eb5f rr:objectMap _:node18upor35ux14 .
+
+km-dev:TriplesMap_faa557f8-9d2b-4405-9405-e670ae990c10 rr:predicateObjectMap km-dev:PredicateObjectMap_7ed09e7c-9039-4c4b-9886-92e577d4eb5f .
+
+km-dev:PredicateObjectMap_7ed09e7c-9039-4c4b-9886-92e577d4eb5f a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node18upor35ux1 .
+
+_:node18upor35ux1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_7ed09e7c-9039-4c4b-9886-92e577d4eb5f .

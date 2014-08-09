@@ -1,0 +1,24 @@
+[
+{
+	url: "http://linkedup-challenge.org/veni.html",
+	description: "Entries to the 2013 LinkedUp Challenge on education mashups",
+	keywords: ["2013", "mashup", "LinkedUp Challenge"],
+	event-id: "l:mashup-principles"
+}
+,
+{
+	url: "http://museum-api.pbworks.com/w/page/21933420/Museum%C2%A0APIs",
+	description: "A list of links to many museums that offer APIs",
+	keywords: ["service", "API", "museum", "art"],
+	event-id: "l:linked-services"
+}
+,
+{
+	url: "http://rdf.ng-london.org.uk/raphael/page/NG1171",
+	description: "An RDF page from the National Gallery of Art in London",
+	keywords: ["RDF", "London", "National Gallery of Art"],
+	event-id: "l:rdf"
+}
+
+]
+
