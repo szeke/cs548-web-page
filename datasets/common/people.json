@@ -1,0 +1,90 @@
+[
+	{
+		"name" : "Pedro Szekely" ,
+		"email" : "pszekely@isi.edu" ,
+		"title" : "Prof" ,
+		"homepage" : "http://www.isi.edu/~szekely" ,
+		"depiction" : "http://www.isi.edu/~szekely/assets/img/staff/pedro.jpeg" ,
+		"twitter" : "szeke"
+	} ,
+
+	{
+		"name" : "José Luis Ambite" ,
+		"email" : "ambite@isi.edu" ,
+		"title" : "Prof" ,
+		"homepage" : "http://www.isi.edu/~ambite" ,
+		"depiction" : "http://drop.isi.edu/sites/default/files/imagecache/profile_photo/photos/users/picture-32.jpg" ,
+	} ,
+
+	{
+		"name" : "Craig Knoblock" ,
+		"email" : "knoblock@isi.edu" ,
+		"title" : "Prof" ,
+		"homepage" : "http://www.isi.edu/~knoblock" ,
+		"depiction" : "http://www.isi.edu/integration/people/knoblock/img/CraigKnoblock.jpg" ,
+		"twitter" : "caknoblock"
+	} ,
+
+	{
+		"name" : "Kristina Lerman" ,
+		"email" : "lerman@isi.edu" ,
+		"title" : "Prof" ,
+		"homepage" : "http://www.isi.edu/~lerman" ,
+		"depiction" : "http://www.isi.edu/integration/people/lerman/img/KLerman.jpg" 
+	} ,
+
+	{
+		"name" : "Mohsen Taheriyan" ,
+		"email" : "mohsen@isi.edu" ,
+		"title" : "Mr" ,
+		"homepage" : "http://www-scf.usc.edu/~taheriya/" ,
+		"depiction" : "http://www-scf.usc.edu/~taheriya/images/image24958.jpg" ,
+		"twitter" : "taheriyan"
+	} ,
+
+	{
+		"name" : "Bo Wu" ,
+		"email" : "bowu@isi.edu" ,
+		"title" : "Mr" ,
+		"homepage" : "http://www-scf.usc.edu/~wubo/" ,
+		"depiction" : "http://www-scf.usc.edu/~wubo/_MG_0004-Edit.jpg" 
+	} ,
+
+	{
+		"name" : "Jason Slepicka" ,
+		"email" : "slepicka@isi.edu" ,
+		"title" : "Mr" ,
+		"homepage" : "www.linkedin.com/pub/jason-slepicka/4a/732/410" ,
+		"depiction" : "https://lh4.googleusercontent.com/-uonc-uQiTGw/AAAAAAAAAAI/AAAAAAAAATk/V_iGc4e8Vwk/photo.jpg?sz=80" 
+	} ,
+
+	{
+		"name" : "George Konstantinidis" ,
+		"email" : "konstant@usc.edu" ,
+		"title" : "Mr" ,
+		"homepage" : "http://www-scf.usc.edu/~konstant" ,
+		"depiction" : "http://www-scf.usc.edu/~konstant/images/George_Konstantinidis.jpg?sz=80" 
+	} ,
+
+	{
+		"name" : "Hao Wu" ,
+		"email" : "hwu732@usc.edu" ,
+		"title" : "Mr" ,
+		"homepage" : "http://www-scf.usc.edu/~hwu732/" 
+	} ,
+
+	{
+		"name" : "Purva Tadphale" ,
+		"email" : "tadphale@usc.edu" ,
+		"title" : "Ms" ,
+		"homepage" : "" 
+	} ,
+
+	{
+		"name" : "Himanshu Kulkarni" ,
+		"email" : "hkulkarn@usc.edu" ,
+		"title" : "Mr" ,
+		"homepage" : "" 
+	}
+
+]

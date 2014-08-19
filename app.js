@@ -25,7 +25,7 @@ app.use(stylus.middleware(
 ))
 app.use(express.static(__dirname + '/public'))
 
-var courseUri = 'http://lod.isi.edu/course/cs548/2014/spring';
+var courseUri = 'http://isi.edu/cs548/2014/fall';
 
 var endpoint = '/openrdf-sesame/repositories/cs548?query=';
 var query = "CONSTRUCT { ?s ?p ?o } where { ?s ?p ?o }";
