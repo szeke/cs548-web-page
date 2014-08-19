@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>CS548 Syllabus</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="usc,isi,pedro szekely">
+        <meta name="author" content="Pedro Szekely">
+
+
+        <!-- Le styles -->
+        <!--<link href="public/bootstrap/css/bootstrap.css" rel="stylesheet">-->
+        <style type="text/css">
+            body {
+                padding-top: 40px;
+                padding-bottom: 40px;
+            }
+        </style>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+
+        <script type="text/javascript" src="d3/d3.js"></script>
+    </head>
+    <body>
+
+
+        <div class="container">
+            
+            <div class="hero-unit">
+                <!--<h1>Pedro Szekely</h1>
+                <h3><a href="http://isi.edu">Information Sciences Institute,</a> <a href="http://usc.edu">University of Southern California</a></h3>
+                <p class="muted">4676 Admiralty Way, Marina del Rey, CA 90292</p>
+                <p><br/></p>
+                -->
+            </div>
+
+            <div id="instructors" class="row"></div>
+
+
+            <div class="row"><h2 class="col-xs-12">Administrative Information</h2></div>
+            <div class="row">
+                <p class="col-xs-4"><strong>Prerequisites (can be waived):</strong></p>
+                <p id="prerequisites" class="col-xs-8"></p>
+            </div>
+            <div class="row">
+                <p class="col-xs-4"><strong>Location:</strong></p>
+                <p id="location" class="col-xs-8"></p>
+            </div>
+            <div class="row">
+                <p class="col-xs-4"><strong>Teaching assistants:</strong></p>
+                <p id="tas" class="col-xs-8"></p>
+            </div>
+            <div class="row">
+                <p class="col-xs-4"><strong>Graders:</strong></p>
+                <p id="graders" class="col-xs-8"></p>
+            </div>
+            <div class="row">
+                <p class="col-xs-4"><strong>Blackboard:</strong></p>
+                <p class="col-xs-8">TBD</p>
+            </div>
+
+
+            <div class="row col-xs-12">
+            This course will focus on foundations and techniques for information extraction, modeling and integration. Topics covered include semantic web (RDF, OWL, SPARQL), linked data and services, mash-ups, theory of data integration, schema mappings, record/entity linkage, data cleaning, source modeling, and information extraction. The class will be run as a lecture course with significant hands-on experience. 
+            </div>
+
+            <div class="row"><h2 class="col-xs-12">Lectures</h2></div>
+            <div id="lectures"></div>
+
+            <div class="row"><h2 class="col-xs-12">Homeworks</h2></div>
+            <div id="homeworks">
+                <p class="row col-xs-12">
+                Homeworks must be done individually and they are due at 11:59pm on the due date.
+                You can submit one homework up to one week late without penalty. Once you use your
+                "free late homework" all late homeworks will receive a zero grade.
+                </p>
+                <div class="row">
+                <p class="col-xs-3"><strong>Due Date</strong></p>
+                <p class="col-xs-9"><strong>Topic</strong></p>
+                </div>
+            </div>
+
+            <div class="row"><h2 class="col-xs-12">Evaluation</h2></div>
+            <div class="row">
+                <p class="col-xs-3"><strong>Quizzes</strong></p>
+                <p class="col-xs-9">25%</p>
+            </div>
+            <div class="row">
+                <p class="col-xs-3"><strong>Homeworks</strong></p>
+                <p class="col-xs-9">50%</p>
+            </div>
+            <div class="row">
+                <p class="col-xs-3"><strong>Final Exam</strong></p>
+                <p class="col-xs-9">25%</p>
+            </div>
+
+
+            <div class="row"><h2 class="col-xs-12">Statement on Academic Integrity</h2></div>
+            <div class="row"><p class="col-xs-12">
+            USC seeks to maintain an optimal learning environment. General principles of academic honesty include the concept of respect for the intellectual property of others, the expectation that individual work will be submitted unless otherwise allowed by an instructor, and the obligations both to protect one’s own academic work from misuse by others as well as to avoid using another’s work as one’s own. All students are expected to understand and abide by these principles. SCampus, the Student Guidebook, (www.usc.edu/scampus or http://scampus.usc.edu) contains the University Student Conduct Code (see University Governance, Section 11.00), while the recommended sanctions are located in Appendix A.
+            </p></div>
+
+            <h2 class="row col-xs-12">Statement for Students with Disabilities</h2>
+            <div class="row col-xs-12">
+            Any student requesting academic accommodations based on a disability is required to register with Disability Services and Programs (DSP) each semester. A letter of verification for approved accommodations can be obtained from DSP. Please be sure the letter is delivered to me (or to TA) as early in the semester as possible. DSP is located in STU 301 and is open 8:30 a.m.–5:00 p.m., Monday through Friday. Website and contact information for DSP: http://sait.usc.edu/academicsupport/centerprograms/dsp/home_index.html, (213) 740- 0776 (Phone), (213) 740-6948 (TDD only), (213) 740-8216 (FAX) ability@usc.edu.
+            </div>
+
+            <h2 class="row col-xs-12">Emergency Preparedness/Course Continuity in a Crisis</h2>
+            <div class="row col-xs-12">
+            In case of a declared emergency if travel to campus is not feasible, USC executive leadership will announce an electronic way for instructors to teach students in their residence halls or homes using a combination of Blackboard, teleconferencing, and other technologies.
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+        <script type="text/javascript">
+
+            // Utility functions to compensate for shortcomings of the JSON.
+
+            // Comparator to sort lectures by date.
+            function compareEvents(a, b) {
+                var x = a["syll:hasEventDate"];
+                var y = b["syll:hasEventDate"];
+                return x < y ? -1 : 1;
+            }
+
+            function removeEventsWithoutDates(lectures) {
+                var result = new Array();
+                for (var i = 0; i < lectures.length; i++) {
+                    var date = lectures[i]["syll:hasEventDate"];
+                    if (typeof date != "undefined") {
+                        result[result.length] = lectures[i];
+                    }
+                }
+                return result;
+            }
+
+            // Values of attributes are sometimes in arrays and sometimes
+            // a naked value of object.
+            function getSingleValue(object, attribute) {
+                var value = object[attribute];
+                if (typeof value === "undefined") {
+                    return "";
+                } else if (value.length) {
+                    return value;
+                } else {
+                    return value;
+                }
+            }
+
+            // Start of D3 code
+
+            d3.json("data/cs548.json", function(json) {
+
+                // Pre-process the data.
+
+                var data = json[0];
+                data["syll:hasLecture"] = removeEventsWithoutDates(data["syll:hasLecture"]);
+                data["syll:hasLecture"].sort(compareEvents);
+                data["syll:hasHomework"] = removeEventsWithoutDates(data["syll:hasHomework"]);
+                data["syll:hasHomework"].sort(compareEvents);
+                
+                // Title
+
+                d3.select(".hero-unit").append("div").attr("class", "row")
+                    .append("h1")
+                    .attr("class", "col-xs-12")
+                    .attr("class", "text-center")
+                    .text(data["dcterms:title"]);
+                d3.select(".hero-unit").append("div").attr("class", "row")
+                    .append("h3")
+                    .attr("class", "col-xs-12")
+                    .attr("class", "text-center")
+                    .attr("style", "margin-bottom:25px")
+                    .text("Fall 2014");
+
+                // Instructors
+
+                var person = d3.select("#instructors").selectAll("p")
+                    .data(data["syll:hasInstructor"])
+                    .enter()
+                    .append("div")
+                    .attr("class", "col-xs-6 text-center lead");
+                person.append("p").append("img")
+                    .attr("height", 150)
+                    .attr("src", function(d) {
+                        return d["foaf:depiction"]["@id"];});
+                person.append("p").append("a")
+                    .attr("href", function(d) {return d["foaf:homepage"]["@id"]})  
+                    .text(function(d) {return d["foaf:name"];});
+
+                // Administrative Information
+
+                d3.select("#prerequisites").append("ul").attr("style", "list-style-type: square; padding-left: 0px;")
+                    .selectAll("li")
+                        .data(data["vivo:hasPrerequisite"])
+                        .enter()
+                        .append("li")
+                        .text(function(d) { return d["rdfs:label"]});
+                d3.select("#location").append("ul").attr("style", "list-style-type: square; padding-left: 0px;")
+                    .selectAll("li")
+                        .data(data["vivo:hasGeographicLocation"])
+                        .enter()
+                        .append("li")
+                        .text(function(d) { return d["rdfs:label"];});
+                d3.select("#tas").append("ul").attr("style", "list-style-type: square; padding-left: 0px;")
+                    .selectAll("li")
+                        .data(data["syll:hasTeachingAssistant"])
+                        .enter()
+                        .append("li")
+                        .text(function(d) { return d["foaf:name"]});
+                d3.select("#graders").append("ul").attr("style", "list-style-type: square; padding-left: 0px;")
+                    .selectAll("li")
+                        .data(data["syll:hasGrader"])
+                        .enter()
+                        .append("li")
+                        .text(function(d) { return d["foaf:name"]});
+
+                // Lectures
+
+                var lectureDiv = d3.select("#lectures").selectAll("div")
+                    .data(data["syll:hasLecture"])
+                    .enter()
+                    .append("div");
+                // First row with lecture title and date
+                var lectureRow1 = lectureDiv.append("div").attr("class", "row");
+                lectureRow1.append("div")
+                    .attr("class", "col-xs-9")
+                    .append("h4")
+                        .text(function(d) {return d["dcterms:title"];});
+                lectureRow1.append("div")
+                    .attr("class", "col-xs-3 text-right")
+                    .append("h4")
+                        .text(function(d) {return d["syll:hasEventDate"];});
+                // Second row with description and instructors
+                var lectureRow2 = lectureDiv.append("div").attr("class", "row");
+                lectureRow2.append("div")
+                    .attr("class", "col-xs-9")
+                    .append("p")
+                        .text(function(d) {return d["dcterms:description"];});
+                var lectureInstructors = lectureRow2.append("ul")
+                    .attr("class", function(d){
+                        var data = d["syll:hasInstructor"];
+                        var obj = d3.select(this);
+                        if (!data){
+                            // Nothing to add when there is no data.
+                        } else if (data.length){
+                            data.forEach(function(e){
+                                obj.append("li")
+                                    .attr("class", "list-unstyled text-right")
+                                    .text(e["foaf:name"]);
+                            })
+                        } else {
+                            obj.append("li")
+                                .attr("class", "list-unstyled text-right")
+                                .text(getSingleValue(data, "foaf:name"));
+                        }
+                        return "col-xs-3";
+                    });
+
+
+                // Homeworks
+
+                var homework = d3.select("#homeworks").selectAll("div")
+                    .data(data["syll:hasHomework"])
+                    .enter()
+                    .append("div")
+                    .attr("class", "row");
+                homework.append("p")
+                    .attr("class", "col-xs-3")
+                    .text(function(d) { return d["syll:hasEventDate"]});
+                homework.append("p")
+                    .attr("class", "col-xs-9")
+                    .text(function(d) { return d["dcterms:title"]});
+            });
+
+        </script>
+    </body>
+</html>

@@ -3,3 +3,6 @@ node_modules
 k/R2RML
 k/JSON
 k/UserUploadedFiles
+k/AlignmentGraph
+k/SemanticTypeModels
+k/CRF_Models

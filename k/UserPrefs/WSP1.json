@@ -14,8 +14,8 @@
             "Command": "PublishRDFCommandPreferences",
             "PreferenceValues": {
                 "addInverseProperties": "false",
-                "modelName": "karma",
                 "saveToStore": false,
+                "modelName": "karma",
                 "dbName": "jenadb",
                 "rdfNamespace": "http://isi.edu/cs548/",
                 "hostName": "localhost:3306",

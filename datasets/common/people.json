@@ -54,6 +54,7 @@
 		"name" : "Jason Slepicka" ,
 		"email" : "slepicka@isi.edu" ,
 		"title" : "Mr" ,
+		"homepage" : "www.linkedin.com/pub/jason-slepicka/4a/732/410" ,
 		"depiction" : "https://lh4.googleusercontent.com/-uonc-uQiTGw/AAAAAAAAAAI/AAAAAAAAATk/V_iGc4e8Vwk/photo.jpg?sz=80" 
 	} ,
 
@@ -61,7 +62,29 @@
 		"name" : "George Konstantinidis" ,
 		"email" : "konstant@usc.edu" ,
 		"title" : "Mr" ,
+		"homepage" : "http://www-scf.usc.edu/~konstant" ,
 		"depiction" : "http://www-scf.usc.edu/~konstant/images/George_Konstantinidis.jpg?sz=80" 
+	} ,
+
+	{
+		"name" : "Hao Wu" ,
+		"email" : "hwu732@usc.edu" ,
+		"title" : "Mr" ,
+		"homepage" : "http://www-scf.usc.edu/~hwu732/" 
+	} ,
+
+	{
+		"name" : "Purva Tadphale" ,
+		"email" : "tadphale@usc.edu" ,
+		"title" : "Ms" ,
+		"homepage" : "" 
+	} ,
+
+	{
+		"name" : "Himanshu Kulkarni" ,
+		"email" : "hkulkarn@usc.edu" ,
+		"title" : "Mr" ,
+		"homepage" : "" 
 	}
 
 ]
