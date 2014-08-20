@@ -1,8 +1,8 @@
 {
     "ViewPreferences": {
-        "defaultRowsToShowInTopTables": 150,
         "maxRowsToShowInNestedTables": 20,
-        "maxCharactersInHeader": 10,
+        "defaultRowsToShowInTopTables": 150,
+        "maxCharactersInHeader": 80,
         "maxCharactersInCell": 200
     },
     "Commands": [
@@ -14,8 +14,8 @@
             "Command": "PublishRDFCommandPreferences",
             "PreferenceValues": {
                 "addInverseProperties": "false",
-                "saveToStore": false,
                 "modelName": "karma",
+                "saveToStore": false,
                 "dbName": "jenadb",
                 "rdfNamespace": "http://isi.edu/cs548/",
                 "hostName": "localhost:3306",
