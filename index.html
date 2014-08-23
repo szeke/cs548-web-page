@@ -220,7 +220,7 @@
                         .data(data["syll:hasTeachingAssistant"])
                         .enter()
                         .append("li")
-                        .text(function(d) { return d["foaf:name"]});
+                        .text(function(d) { return d["foaf:name"]+", "+d["foaf:mbox"]["rdfs:label"]});
                 d3.select("#graders").append("ul").attr("style", "list-style-type: square; padding-left: 0px;")
                     .selectAll("li")
                         .data(data["syll:hasGrader"])
