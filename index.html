@@ -220,7 +220,7 @@
                         .data(data["syll:hasTeachingAssistant"])
                         .enter()
                         .append("li")
-                        .text(function(d) { return d["foaf:name"]});
+                        .text(function(d) { return d["foaf:name"]+", "+d["foaf:mbox"]["rdfs:label"]});
                 d3.select("#graders").append("ul").attr("style", "list-style-type: square; padding-left: 0px;")
                     .selectAll("li")
                         .data(data["syll:hasGrader"])
@@ -260,12 +260,12 @@
                             data.forEach(function(e){
                                 obj.append("li")
                                     .attr("class", "list-unstyled text-right")
-                                    .text(e["foaf:name"]);
+                                    .text(e["foaf:lastName"]);
                             })
                         } else {
                             obj.append("li")
                                 .attr("class", "list-unstyled text-right")
-                                .text(getSingleValue(data, "foaf:name"));
+                                .text(getSingleValue(data, "foaf:lastName"));
                         }
                         return "col-xs-3";
                     });
