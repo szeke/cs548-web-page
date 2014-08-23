@@ -260,12 +260,12 @@
                             data.forEach(function(e){
                                 obj.append("li")
                                     .attr("class", "list-unstyled text-right")
-                                    .text(e["foaf:name"]);
+                                    .text(e["foaf:lastName"]);
                             })
                         } else {
                             obj.append("li")
                                 .attr("class", "list-unstyled text-right")
-                                .text(getSingleValue(data, "foaf:name"));
+                                .text(getSingleValue(data, "foaf:lastName"));
                         }
                         return "col-xs-3";
                     });
