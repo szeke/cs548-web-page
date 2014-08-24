@@ -1,6 +1,7 @@
 {
 	"comment" : "The main events of CS548." ,
 	"course" : "CS548" ,
+	"title" : "Information Integration on the Web (CS548)" ,
 	"prerequisites" : [ "CS585", "CS561" ] ,
 	"instructors" : [ "knoblock" , "pszekely" ] ,
 	"teaching-assistants" : [ "bowu", "hwu732" ] ,
