@@ -79,7 +79,7 @@
 		{
 			"id" : "l-glav-advanced" ,
 			"title" : "Logical data integration: (advanced)" ,
-			"description" : "We describe the formal approach to data integration: (1) defining  mappings between source and target schemas, using logical rules/queries/st-tgds, and (2) reasoning with these rules to rewrite queries posed over the target schema to executable queries over the source schemas. We describe the virtual approach to data integration where the data remains at remote sources and the data integration system (mediator) retrieves the data in real time in response to user queries. " 
+			"description" : "We present the latest research and techniques on how to build a highly scalable approach using logical data integration techniques." ,
 		} ,
 
 		{
@@ -169,7 +169,7 @@
 		{
 			"id" : "l-intellectual-property" ,
 			"title" : "Intellectual Property" ,
-			"description" : "TBD" 
+			"description" : "We present the various methods for protecting intellectual property, including patents, trade secrets, copyright, and trademarks.  We also present and discuss various legal case studies related to the techniques presented in the class." 
 		} ,
 
 		{
