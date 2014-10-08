@@ -7,3 +7,10 @@ k/SemanticTypeModels
 k/CRF_Models
 k/SemanticTypeModels/segments.gen
 k/UserPrefs/*.json
+k/alignment-graph
+k/models-autosave
+k/models-graphviz
+k/models-json
+k/models-r2rml
+k/semantic-type-files
+k/user-uploaded-files
